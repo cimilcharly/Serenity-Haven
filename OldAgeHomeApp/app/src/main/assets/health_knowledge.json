@@ -1,0 +1,360 @@
+[
+  {
+    "category": "medicines",
+    "name": "Paracetamol (Acetaminophen)",
+    "usage": "Pain relief, lower fever.",
+    "dosage": "500-1000mg every 4-6 hours. Max 4g/day.",
+    "warnings": "Liver damage in overdose. Avoid alcohol."
+  },
+  {
+    "category": "medicines",
+    "name": "Ibuprofen",
+    "usage": "Anti-inflammatory, pain relief, fever.",
+    "dosage": "200-400mg every 4-6 hours.",
+    "warnings": "Stomach upset, ulcers, kidney issues. Take with food."
+  },
+  {
+    "category": "medicines",
+    "name": "Aspirin",
+    "usage": "Pain relief, blood thinner, heart protection.",
+    "dosage": "75-81mg (low dose) daily for heart; 300mg for pain.",
+    "warnings": "Bleeding risk, stomach irritation. Not for children."
+  },
+  {
+    "category": "medicines",
+    "name": "Diclofenac",
+    "usage": "Severe pain, arthritis, inflammation.",
+    "dosage": "50mg 2-3 times daily.",
+    "warnings": "Heart risk with long term use. Stomach ulcers."
+  },
+  {
+    "category": "medicines",
+    "name": "Amoxicillin",
+    "usage": "Antibiotic for bacterial infections.",
+    "dosage": "250-500mg every 8 hours.",
+    "warnings": "Finish full course. Allergy risk (Penicillin)."
+  },
+  {
+    "category": "medicines",
+    "name": "Azithromycin",
+    "usage": "Antibiotic for throat, chest infections.",
+    "dosage": "500mg daily for 3 days.",
+    "warnings": "Heart rhythm issues. Take on empty stomach if specified."
+  },
+  {
+    "category": "medicines",
+    "name": "Cetirizine",
+    "usage": "Allergies, runny nose, itching.",
+    "dosage": "10mg once daily.",
+    "warnings": "May cause drowsiness."
+  },
+  {
+    "category": "medicines",
+    "name": "Loratadine",
+    "usage": "Allergies (non-drowsy).",
+    "dosage": "10mg once daily.",
+    "warnings": "Rare dry mouth/headache."
+  },
+  {
+    "category": "medicines",
+    "name": "Omeprazole",
+    "usage": "Acidity, GERD, stomach ulcers.",
+    "dosage": "20-40mg daily before breakfast.",
+    "warnings": "Long term use affects bone density/B12."
+  },
+  {
+    "category": "medicines",
+    "name": "Pantoprazole",
+    "usage": "Acidity, gas, heart burn.",
+    "dosage": "40mg daily before food.",
+    "warnings": "Headache, diarrhea."
+  },
+  {
+    "category": "medicines",
+    "name": "Metformin",
+    "usage": "Type 2 Diabetes control.",
+    "dosage": "500-1000mg with meals.",
+    "warnings": "Lactic acidosis (rare), upset stomach."
+  },
+  {
+    "category": "medicines",
+    "name": "Amlodipine",
+    "usage": "High blood pressure (Hypertension).",
+    "dosage": "5-10mg daily.",
+    "warnings": "Swelling in ankles (Edema)."
+  },
+  {
+    "category": "medicines",
+    "name": "Lisinopril",
+    "usage": "High BP, heart failure.",
+    "dosage": "10-40mg daily.",
+    "warnings": "Dry cough is common side effect."
+  },
+  {
+    "category": "medicines",
+    "name": "Atorvastatin",
+    "usage": "Lowers cholesterol.",
+    "dosage": "10-80mg daily at night.",
+    "warnings": "Muscle pain/weakness."
+  },
+  {
+    "category": "medicines",
+    "name": "Levothyroxine",
+    "usage": "Hypothyroidism (Thyroid hormone).",
+    "dosage": "25-150mcg daily empty stomach.",
+    "warnings": "Palpitations if dose too high."
+  },
+  {
+    "category": "medicines",
+    "name": "Dextromethorphan",
+    "usage": "Dry cough suppressant.",
+    "dosage": "10-20mg every 4 hours.",
+    "warnings": "Drowsiness, dizziness."
+  },
+  {
+    "category": "medicines",
+    "name": "Guaifenesin",
+    "usage": "Expectorant (Wet cough).",
+    "dosage": "200-400mg every 4 hours.",
+    "warnings": "Drink plenty of water."
+  },
+  {
+    "category": "medicines",
+    "name": "Loperamide",
+    "usage": "Diarrhea control.",
+    "dosage": "2mg after loose stool.",
+    "warnings": "Constipation, avoid if infection suspected."
+  },
+  {
+    "category": "medicines",
+    "name": "Dicyclomine",
+    "usage": "Stomach cramps, IBS.",
+    "dosage": "10-20mg up to 4 times daily.",
+    "warnings": "Dry mouth, blurred vision."
+  },
+  {
+    "category": "medicines",
+    "name": "Calcium + Vitamin D3",
+    "usage": "Bone health, Osteoporosis.",
+    "dosage": "500mg/250IU once or twice daily.",
+    "warnings": "Kidney stones risk if excessive."
+  },
+  {
+    "category": "health_tips",
+    "topic": "Hydration",
+    "advice": "Drink 8 glasses of water daily. Dehydration causes confusion in elderly."
+  },
+  {
+    "category": "health_tips",
+    "topic": "Diet",
+    "advice": "High fiber diet (fruits, oats) prevents constipation. Low salt for BP."
+  },
+  {
+    "category": "health_tips",
+    "topic": "Fall Prevention",
+    "advice": "Use grab bars, wear anti-slip shoes, ensure good lighting."
+  },
+  {
+    "category": "condition_mappings",
+    "condition": "Fever",
+    "keywords": [
+      "fever",
+      "hot",
+      "temperature",
+      "chills",
+      "shivering"
+    ],
+    "suggested_medicines": [
+      "Paracetamol",
+      "Ibuprofen"
+    ],
+    "advice": "Rest, plenty of fluids. Cold sponge if temp > 102F. Consult if lasts > 3 days."
+  },
+  {
+    "category": "condition_mappings",
+    "condition": "Headache",
+    "keywords": [
+      "headache",
+      "migraine",
+      "head pain",
+      "throbbing"
+    ],
+    "suggested_medicines": [
+      "Paracetamol",
+      "Ibuprofen",
+      "Aspirin"
+    ],
+    "advice": "Dark room, sleep, hydration. Check BP."
+  },
+  {
+    "category": "condition_mappings",
+    "condition": "Acid Reflux / Gas",
+    "keywords": [
+      "gas",
+      "acidity",
+      "heartburn",
+      "bloating",
+      "stomach burn"
+    ],
+    "suggested_medicines": [
+      "Omeprazole",
+      "Pantoprazole",
+      "Antacid Syrup"
+    ],
+    "advice": "Small meals, avoid spicy food, don't lie down immediately after eating."
+  },
+  {
+    "category": "condition_mappings",
+    "condition": "Diarrhea",
+    "keywords": [
+      "diarrhea",
+      "loose motion",
+      "stomach upset",
+      "runny stool"
+    ],
+    "suggested_medicines": [
+      "Loperamide",
+      "ORS (Hydration)",
+      "Probiotics"
+    ],
+    "advice": "Hydration is key (ORS). Avoid milk/spicy food. BRAT diet (Banana, Rice, Apple, Toast)."
+  },
+  {
+    "category": "condition_mappings",
+    "condition": "Constipation",
+    "keywords": [
+      "constipation",
+      "hard stool",
+      "cant poop"
+    ],
+    "suggested_medicines": [
+      "Lactulose Syrup",
+      "Psyllium Husk (Isabgol)",
+      "Bisacodyl"
+    ],
+    "advice": "Increase fiber (papaya, oats), water intake, and walking."
+  },
+  {
+    "category": "condition_mappings",
+    "condition": "Joint Pain / Arthritis",
+    "keywords": [
+      "joint pain",
+      "knee pain",
+      "back pain",
+      "arthritis",
+      "stiff"
+    ],
+    "suggested_medicines": [
+      "Diclofenac Gel (Topical)",
+      "Paracetamol",
+      "Calcium/Vit D"
+    ],
+    "advice": "Hot water fomentation, gentle movement, keep weight in check."
+  },
+  {
+    "category": "condition_mappings",
+    "condition": "Common Cold",
+    "keywords": [
+      "cold",
+      "runny nose",
+      "sneeze",
+      "stuff nose"
+    ],
+    "suggested_medicines": [
+      "Cetirizine",
+      "Phenylephrine",
+      "Vapor Rub"
+    ],
+    "advice": "Steam inhalation, warm soups, rest."
+  },
+  {
+    "category": "condition_mappings",
+    "condition": "Cough",
+    "keywords": [
+      "cough",
+      "throat pain",
+      "sore throat"
+    ],
+    "suggested_medicines": [
+      "Dextromethorphan (Dry)",
+      "Guaifenesin (Wet)",
+      "Honey + Ginger"
+    ],
+    "advice": "Salt water gargle, warm water."
+  },
+  {
+    "category": "condition_mappings",
+    "condition": "High Blood Pressure",
+    "keywords": [
+      "high bp",
+      "hypertension",
+      "giddiness"
+    ],
+    "suggested_medicines": [
+      "Amlodipine (Rx)",
+      "Lisinopril (Rx)"
+    ],
+    "advice": "Low salt, relax, take meds on time. Check BP immediately."
+  },
+  {
+    "category": "condition_mappings",
+    "condition": "Hypoglycemia (Low Sugar)",
+    "keywords": [
+      "low sugar",
+      "dizzy",
+      "sweating",
+      "shaking",
+      "hungry"
+    ],
+    "suggested_medicines": [
+      "Glucose Tablet",
+      "Sugar/Candy"
+    ],
+    "advice": "Eat something sweet immediately (juice, candy), then a proper meal."
+  },
+  {
+    "category": "condition_mappings",
+    "condition": "Insomnia",
+    "keywords": [
+      "sleep",
+      "insomnia",
+      "awake",
+      "restless"
+    ],
+    "suggested_medicines": [
+      "Melatonin (Rx)",
+      "Warm Milk"
+    ],
+    "advice": "Sleep hygiene, no caffeine after 4 PM, warm bath."
+  },
+  {
+    "category": "condition_mappings",
+    "condition": "Skin Allergy / Rash",
+    "keywords": [
+      "itch",
+      "rash",
+      "allergy",
+      "redness"
+    ],
+    "suggested_medicines": [
+      "Cetirizine",
+      "Calamine Lotion"
+    ],
+    "advice": "Avoid irritant, cool compress, loose cotton clothes."
+  },
+  {
+    "category": "condition_mappings",
+    "condition": "Minor Cut / Wound",
+    "keywords": [
+      "cut",
+      "wound",
+      "bleeding",
+      "scrape"
+    ],
+    "suggested_medicines": [
+      "Antiseptic Liquid (Betadine)",
+      "Antibiotic Ointment"
+    ],
+    "advice": "Clean with water, apply antiseptic, cover with bandage. Tetanus shot if old."
+  }
+]

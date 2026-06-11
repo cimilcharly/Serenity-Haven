@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OldAgeHomeApp"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="false" />
+
+        <activity android:name=".activities.SignupActivity" />
+        <activity android:name=".activities.AdminDashboardActivity" />
+        <activity android:name=".activities.DoctorDashboardActivity" />
+        <activity android:name=".activities.StaffDashboardActivity" />
+        <activity android:name=".activities.ResidentListActivity" />
+        <activity android:name=".activities.AddResidentActivity" />
+        <activity android:name=".activities.DoctorListActivity" />
+        <activity android:name=".activities.AppointmentActivity" />
+        <activity android:name=".activities.NotificationActivity" />
+        <activity android:name=".activities.ResidentRegistrationActivity" />
+
+        <!-- Push Notification Integration -->
+        <service
+            android:name=".utils.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".activities.MedicineActivity" />
+        <activity android:name=".activities.ChatbotActivity" />
+        <activity android:name=".activities.ResidentDashboardActivity" />
+        <activity android:name=".activities.MainStaffDashboardActivity" />
+        <activity android:name=".activities.PendingApprovalsActivity" />
+        <activity android:name=".activities.ForgotPasswordActivity" />
+        <receiver android:name=".utils.AlarmReceiver" android:exported="false" />
+    </application>
+
+</manifest>

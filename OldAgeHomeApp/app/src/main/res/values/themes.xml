@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.OldAgeHomeApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color - Deep Blue -->
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryVariant">@color/primary_blue_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color - Teal -->
+        <item name="colorSecondary">@color/secondary_teal</item>
+        <item name="colorSecondaryVariant">@color/secondary_teal_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Backgrounds -->
+        <item name="android:windowBackground">@color/background_soft</item>
+        <item name="android:colorBackground">@color/background_soft</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary_blue_dark</item>
+
+        <!-- Input & Text Visibility Enhancements -->
+        <item name="android:textColorPrimary">@color/text_dark</item>
+        <item name="android:textColorSecondary">@color/text_grey</item>
+        <item name="colorOnSurface">@color/text_dark</item>
+        <item name="colorOnBackground">@color/text_dark</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:editTextColor">@color/text_dark</item>
+
+        <!-- Control Colors (affects cursors, checkboxes, etc) -->
+        <item name="colorControlNormal">@color/text_grey</item>
+        <item name="colorControlActivated">@color/brand_start</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

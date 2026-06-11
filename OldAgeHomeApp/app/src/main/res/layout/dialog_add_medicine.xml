@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:clipToPadding="false"
+    android:background="#FAFAFA">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Medicine"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#2D3E50"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/etMedicineName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Medicine Name (e.g. Aspirin)"
+        android:inputType="textCapWords"
+        android:minHeight="48dp"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="2dp" />
+
+    <EditText
+        android:id="@+id/etDosage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dosage (e.g. 1 Tablet)"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="2dp" />
+
+    <EditText
+        android:id="@+id/etQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Total Stock Quantity (e.g. 30)"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reminder Times"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#2D3E50"
+        android:layout_marginBottom="12dp" />
+
+    <LinearLayout
+        android:id="@+id/timeSlotsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+        <!-- Dynamic time slots -->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAddTime"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="+ Add Time Slot"
+        android:backgroundTint="#ECEFF1"
+        android:textColor="#2D3E50"
+        android:layout_marginBottom="8dp" />
+
+</LinearLayout>

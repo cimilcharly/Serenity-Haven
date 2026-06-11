@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Colors (Vibrant Theme) -->
+    <color name="brand_start">#4e54c8</color>
+    <color name="brand_end">#8f94fb</color>
+    <color name="brand_secondary">#FF8A65</color> <!-- Use orange as secondary/accent -->
+    <color name="accent_orange">#FF8A65</color>
+    <color name="background_light">#F5F7FA</color>
+    <color name="text_dark">#2D3436</color>
+    <color name="text_grey">#636E72</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Legacy Color Aliases (Mapped to new theme) -->
+    <color name="purple_200">@color/brand_end</color>
+    <color name="purple_500">@color/brand_start</color>
+    <color name="purple_700">@color/brand_start</color>
+    <color name="teal_200">@color/brand_secondary</color>
+    <color name="teal_700">@color/brand_start</color>
+    <color name="black">@color/text_dark</color>
+    <color name="search_web">@color/brand_start</color>
+
+    <!-- Theme Resource Mappings -->
+    <color name="primary_blue">@color/brand_start</color>
+    <color name="primary_blue_dark">#303F9F</color> <!-- Darker variant of brand_start -->
+
+    <color name="secondary_teal">@color/brand_secondary</color>
+    <color name="secondary_teal_dark">#E64A19</color> <!-- Darker variant of brand_secondary -->
+
+    <color name="background_soft">@color/background_light</color>
+    <!-- Missing color resource definitions -->
+    <color name="primary_blue_light">#7986CB</color> <!-- Lighter variant -->
+    <color name="secondary_teal_light">#FFCCBC</color> <!-- Lighter variant -->
+    <color name="ic_launcher_background">#FFFFFF</color>
+
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "70230529493",
+    "project_id": "oldagehomeapp",
+    "storage_bucket": "oldagehomeapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70230529493:android:379e62eb3f513bfb73d95c",
+        "android_client_info": {
+          "package_name": "com.example.oldagehome"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHVbFEufgoT0VSHF0DwQ0q0qSAAW3konk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

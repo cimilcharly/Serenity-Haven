@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serenity - Premium Old Age Home Management App</title>
+  <meta name="description" content="Serenity is a Native Android Application designed for seamless coordination and high-quality care in Senior Living communities.">
+  <link rel="stylesheet" href="index.css">
+  
+  <!-- Add FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Inline Styles for the Interactive Phone Prototype */
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      background: #0f111e;
+      color: #ffffff;
+      font-family: var(--font-body);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      user-select: none;
+      padding-top: 25px; /* Notch space */
+    }
+
+    .phone-status-bar {
+      height: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1.25rem;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 600;
+      position: absolute;
+      top: 5px;
+      width: 100%;
+      z-index: 101;
+    }
+
+    .status-icons {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .phone-content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-y: auto;
+      scrollbar-width: none; /* Hide scrollbar for Firefox */
+    }
+    .phone-content-area::-webkit-scrollbar {
+      display: none; /* Hide scrollbar for Chrome/Safari */
+    }
+
+    /* Screen Styles */
+    .screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: scale(0.95);
+    }
+
+    .screen.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1);
+    }
+
+    /* Screen 1: Welcome & Login */
+    .screen-login {
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .phone-logo {
+      width: 70px;
+      height: 70px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      color: #0b0c16;
+      box-shadow: 0 10px 25px rgba(255, 126, 95, 0.3);
+    }
+
+    .phone-app-title {
+      text-align: center;
+    }
+
+    .phone-app-title h4 {
+      font-size: 1.6rem;
+      color: var(--text-primary);
+    }
+
+    .phone-app-title p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .login-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .phone-input {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      color: white;
+      font-size: 0.85rem;
+      font-family: inherit;
+    }
+
+    .phone-input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .role-select-title {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+
+    .role-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      width: 100%;
+    }
+
+    .btn-phone-role {
+      padding: 0.6rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+
+    .btn-phone-role.selected {
+      background: rgba(255, 126, 95, 0.15);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-phone-submit {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #0b0c16;
+      border: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-top: 0.5rem;
+    }
+
+    .btn-phone-submit:hover {
+      filter: brightness(1.1);
+    }
+
+    /* Simulated Dashboard Layouts */
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .user-avatar {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 0.85rem;
+    }
+
+    .user-meta h5 {
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .user-meta p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .phone-back {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: transparent;
+      border: none;
+      padding: 0.25rem 0;
+    }
+
+    .phone-back:hover {
+      color: white;
+    }
+
+    .phone-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .phone-card-title {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .phone-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .phone-stat-box {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .phone-stat-val {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .phone-stat-lbl {
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+    }
+
+    /* Lists inside Phone */
+    .phone-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .phone-list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.65rem 0.85rem;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .item-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .item-icon {
+      font-size: 0.95rem;
+      color: var(--secondary);
+    }
+
+    .item-details h6 {
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .item-details p {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .badge {
+      font-size: 0.65rem;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .badge-success { background: rgba(46, 204, 113, 0.2); color: #2ecc71; }
+    .badge-warning { background: rgba(241, 196, 15, 0.2); color: #f1c40f; }
+    .badge-info { background: rgba(52, 152, 219, 0.2); color: #3498db; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="logo-container">
+        <img src="assets/logo.png" alt="Serenity Logo" class="logo-img">
+        <span class="logo-text">Serenity</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#roles" class="nav-link">User Roles</a></li>
+        <li><a href="#demo" class="nav-link">Interactive Demo</a></li>
+        <li><a href="#download" class="btn btn-secondary">Get the App</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">Android Application</div>
+        <h1 class="hero-title">Care Coordination, <br><span class="gradient-text">Made Effortless.</span></h1>
+        <p class="hero-description">
+          Serenity is a Native Android App designed specifically for senior living and old age homes. 
+          Empower your administrators, medical teams, and caregivers with instant updates, structured schedules, and seamless communication.
+        </p>
+        <div class="hero-actions">
+          <a href="#download" class="btn btn-primary">
+            <i class="fa-solid fa-download"></i> Download APK
+          </a>
+          <a href="#demo" class="btn btn-secondary">
+            <i class="fa-solid fa-mobile-screen-button"></i> Try Live Demo
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-img-wrapper">
+          <img src="assets/hero.png" alt="Serenity Android App Showcase" class="hero-img">
+          <div class="hero-glow-ring"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Roles Grid Section -->
+  <section class="section" id="roles">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Role-Based Access</span>
+        <h2 class="section-title">Built for the Entire Care Team</h2>
+        <p class="section-desc">
+          Every role has a tailored experience designed to maximize efficiency and response times.
+        </p>
+      </div>
+
+      <div class="roles-grid">
+        <!-- Card 1: Admin -->
+        <div class="role-card glass-panel">
+          <div class="role-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="role-title">Administrator</h3>
+          <ul class="role-features">
+            <li>Approve staff & doctor accounts</li>
+            <li>Manage resident profiles</li>
+            <li>Monitor facility operations</li>
+            <li>Broadcast system announcements</li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Doctor -->
+        <div class="role-card glass-panel">
+          <div class="role-icon">
+            <i class="fa-solid fa-user-doctor"></i>
+          </div>
+          <h3 class="role-title">Medical Team</h3>
+          <ul class="role-features">
+            <li>Review resident medical profiles</li>
+            <li>Track clinic appointments</li>
+            <li>Prescribe & monitor medicines</li>
+            <li>Provide urgent updates</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Care Staff -->
+        <div class="role-card glass-panel">
+          <div class="role-icon">
+            <i class="fa-solid fa-user-nurse"></i>
+          </div>
+          <h3 class="role-title">Care Staff / Nurse</h3>
+          <ul class="role-features">
+            <li>Log daily vitals & routines</li>
+            <li>Check off medication timings</li>
+            <li>View scheduled duties</li>
+            <li>Report immediate emergencies</li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Receptionist -->
+        <div class="role-card glass-panel">
+          <div class="role-icon">
+            <i class="fa-solid fa-clipboard-user"></i>
+          </div>
+          <h3 class="role-title">Receptionist</h3>
+          <ul class="role-features">
+            <li>Register incoming residents</li>
+            <li>Manage appointment calendars</li>
+            <li>Handle visitor logs</li>
+            <li>Send notifications to doctors</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features Section -->
+  <section class="section" id="features" style="background: rgba(26, 29, 54, 0.2);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Features Overview</span>
+        <h2 class="section-title">Everything You Need to Run Comfortably</h2>
+        <p class="section-desc">
+          Serenity handles all logistics from resident registration to emergency health alerts.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-item glass-panel">
+          <div class="role-icon" style="background: rgba(108, 92, 231, 0.1); color: var(--accent);">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <div class="feature-info">
+            <h3 class="feature-title">Detailed Resident Directory</h3>
+            <p>Maintain detailed profile histories, emergency contacts, room assignments, and doctor notes in one unified cloud database (Firebase Firestore).</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-item glass-panel">
+          <div class="role-icon" style="background: rgba(255, 126, 95, 0.1); color: var(--primary);">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div class="feature-info">
+            <h3 class="feature-title">Appointment Scheduling</h3>
+            <p>Receptionists can book checkups directly with doctors. Doctors receive live notification cards and schedule updates on their dashboards.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-item glass-panel">
+          <div class="role-icon" style="background: rgba(254, 180, 123, 0.1); color: var(--secondary);">
+            <i class="fa-solid fa-pills"></i>
+          </div>
+          <div class="feature-info">
+            <h3 class="feature-title">Medication Logs</h3>
+            <p>Ensure prescriptions are administered precisely. Staff and nurses can view schedule timings and update completed dosages in real time.</p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-item glass-panel">
+          <div class="role-icon" style="background: rgba(108, 92, 231, 0.1); color: var(--accent);">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <div class="feature-info">
+            <h3 class="feature-title">FCM Push Notifications</h3>
+            <p>Powered by Firebase Cloud Messaging. Instantly alert specific doctors of emergency updates or upcoming checkups, keeping response times under minutes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Demo Section -->
+  <section class="section" id="demo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Simulation</span>
+        <h2 class="section-title">Try it Right Now</h2>
+        <p class="section-desc">
+          Select a role, log in, and check out the dashboard previews using the virtual smartphone below.
+        </p>
+      </div>
+
+      <div class="demo-showcase">
+        <div class="phone-wrapper">
+          <div class="phone-notch"></div>
+          
+          <div class="phone-screen">
+            <!-- Simulated Android Top Bar -->
+            <div class="phone-status-bar">
+              <span>12:00</span>
+              <div class="status-icons">
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-signal"></i>
+                <i class="fa-solid fa-battery-full"></i>
+              </div>
+            </div>
+
+            <!-- Content Area inside Phone -->
+            <div class="phone-content-area">
+              
+              <!-- Screen 1: Login Screen -->
+              <div class="screen screen-login active" id="screen-login">
+                <div class="phone-logo">
+                  <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div class="phone-app-title">
+                  <h4>Serenity</h4>
+                  <p>Old Age Home Care</p>
+                </div>
+                
+                <div class="login-form">
+                  <span class="role-select-title">Choose Role to Demo</span>
+                  <div class="role-buttons">
+                    <button class="btn-phone-role selected" data-role="admin">
+                      <i class="fa-solid fa-shield-halved"></i> Admin
+                    </button>
+                    <button class="btn-phone-role" data-role="doctor">
+                      <i class="fa-solid fa-user-doctor"></i> Doctor
+                    </button>
+                    <button class="btn-phone-role" data-role="staff">
+                      <i class="fa-solid fa-user-nurse"></i> Staff
+                    </button>
+                    <button class="btn-phone-role" data-role="receptionist">
+                      <i class="fa-solid fa-clipboard-user"></i> Receptionist
+                    </button>
+                  </div>
+                  
+                  <input type="text" class="phone-input" placeholder="Email Address" value="demo@serenity.care" disabled>
+                  <input type="password" class="phone-input" placeholder="Password" value="••••••••" disabled>
+                  
+                  <button class="btn-phone-submit" id="btn-login-submit">Login as Admin</button>
+                </div>
+              </div>
+
+              <!-- Screen 2: Admin Dashboard -->
+              <div class="screen" id="screen-admin">
+                <div class="dashboard-header">
+                  <div class="user-info">
+                    <div class="user-avatar" style="background: var(--accent);">A</div>
+                    <div class="user-meta">
+                      <h5>Director Sarah</h5>
+                      <p>System Administrator</p>
+                    </div>
+                  </div>
+                  <button class="phone-back btn-logout"><i class="fa-solid fa-right-from-bracket"></i></button>
+                </div>
+
+                <div class="phone-grid-2">
+                  <div class="phone-stat-box">
+                    <div class="phone-stat-val">34</div>
+                    <div class="phone-stat-lbl">Residents</div>
+                  </div>
+                  <div class="phone-stat-box">
+                    <div class="phone-stat-val">12</div>
+                    <div class="phone-stat-lbl">Active Staff</div>
+                  </div>
+                </div>
+
+                <div class="phone-card">
+                  <div class="phone-card-title">
+                    <span>Pending Staff Approvals</span>
+                    <span class="badge badge-warning">2 New</span>
+                  </div>
+                  <div class="phone-list">
+                    <div class="phone-list-item">
+                      <div class="item-left">
+                        <i class="fa-solid fa-user-plus item-icon"></i>
+                        <div class="item-details">
+                          <h6>Dr. Alexander Lane</h6>
+                          <p>Cardiology Expert</p>
+                        </div>
+                      </div>
+                      <span class="badge badge-info">Approve</span>
+                    </div>
+                    <div class="phone-list-item">
+                      <div class="item-left">
+                        <i class="fa-solid fa-user-plus item-icon"></i>
+                        <div class="item-details">
+                          <h6>Nurse Lily Watson</h6>
+                          <p>Morning Care Shift</p>
+                        </div>
+                      </div>
+                      <span class="badge badge-info">Approve</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screen 3: Doctor Dashboard -->
+              <div class="screen" id="screen-doctor">
+                <div class="dashboard-header">
+                  <div class="user-info">
+                    <div class="user-avatar" style="background: #00b894;">D</div>
+                    <div class="user-meta">
+                      <h5>Dr. Neil Vance</h5>
+                      <p>Senior physician</p>
+                    </div>
+                  </div>
+                  <button class="phone-back btn-logout"><i class="fa-solid fa-right-from-bracket"></i></button>
+                </div>
+
+                <div class="phone-grid-2">
+                  <div class="phone-stat-box">
+                    <div class="phone-stat-val">4</div>
+                    <div class="phone-stat-lbl">Today's Visits</div>
+                  </div>
+                  <div class="phone-stat-box">
+                    <div class="phone-stat-val">2</div>
+                    <div class="phone-stat-lbl">Urgent Cases</div>
+                  </div>
+                </div>
+
+                <div class="phone-card">
+                  <div class="phone-card-title">
+                    <span>Today's Checkups</span>
+                  </div>
+                  <div class="phone-list">
+                    <div class="phone-list-item">
+                      <div class="item-left">
+                        <i class="fa-solid fa-clock item-icon"></i>
+                        <div class="item-details">
+                          <h6>Edward Miller (Room 102)</h6>
+                          <p>12:30 PM - Regular Checkup</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="phone-list-item">
+                      <div class="item-left">
+                        <i class="fa-solid fa-triangle-exclamation item-icon" style="color: #e74c3c;"></i>
+                        <div class="item-details">
+                          <h6>Martha Rose (Room 205)</h6>
+                          <p>02:15 PM - High BP Alert</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screen 4: Staff Dashboard -->
+              <div class="screen" id="screen-staff">
+                <div class="dashboard-header">
+                  <div class="user-info">
+                    <div class="user-avatar" style="background: #e17055;">N</div>
+                    <div class="user-meta">
+                      <h5>Nurse Nancy</h5>
+                      <p>Day Shift Crew</p>
+                    </div>
+                  </div>
+                  <button class="phone-back btn-logout"><i class="fa-solid fa-right-from-bracket"></i></button>
+                </div>
+
+                <div class="phone-card">
+                  <div class="phone-card-title">
+                    <span>Resident Vitals Tasklist</span>
+                  </div>
+                  <div class="phone-list">
+                    <div class="phone-list-item">
+                      <div class="item-left">
+                        <i class="fa-solid fa-heart-pulse item-icon"></i>
+                        <div class="item-details">
+                          <h6>Check BP - Edward Miller</h6>
+                          <p>Due: 10:00 AM</p>
+                        </div>
+                      </div>
+                      <span class="badge badge-success">Done</span>
+                    </div>
+                    <div class="phone-list-item">
+                      <div class="item-left">
+                        <i class="fa-solid fa-pills item-icon"></i>
+                        <div class="item-details">
+                          <h6>Insulin - Martha Rose</h6>
+                          <p>Due: 01:00 PM</p>
+                        </div>
+                      </div>
+                      <span class="badge badge-warning">Pending</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Screen 5: Receptionist Dashboard -->
+              <div class="screen" id="screen-receptionist">
+                <div class="dashboard-header">
+                  <div class="user-info">
+                    <div class="user-avatar" style="background: var(--primary);">R</div>
+                    <div class="user-meta">
+                      <h5>Clerk Jacob</h5>
+                      <p>Receptionist</p>
+                    </div>
+                  </div>
+                  <button class="phone-back btn-logout"><i class="fa-solid fa-right-from-bracket"></i></button>
+                </div>
+
+                <div class="phone-card">
+                  <div class="phone-card-title">
+                    <span>Actions</span>
+                  </div>
+                  <div class="phone-list">
+                    <div class="phone-list-item" style="cursor: pointer; hover: opacity 0.8;">
+                      <div class="item-left">
+                        <i class="fa-solid fa-user-plus item-icon"></i>
+                        <div class="item-details">
+                          <h6>Add New Resident</h6>
+                          <p>Register records and assign rooms</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="phone-list-item" style="cursor: pointer;">
+                      <div class="item-left">
+                        <i class="fa-solid fa-calendar-plus item-icon"></i>
+                        <div class="item-details">
+                          <h6>Book Appointment</h6>
+                          <p>Schedule doctor consultation</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="demo-instructions">
+        <p><i class="fa-solid fa-circle-info"></i> Note: This interactive dashboard demonstrates the flow designed in the native Kotlin/Java codebase. For hosting a full production live mobile demo, you can build your APK and host it on <code>Appetize.io</code> to embed a real live android emulator container here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download & Repo Details -->
+  <section class="section" id="download" style="background: linear-gradient(180deg, var(--bg-primary) 0%, #121424 100%);">
+    <div class="container" style="text-align: center;">
+      <div class="section-header">
+        <span class="section-tag" style="color: var(--secondary);">Get Started</span>
+        <h2 class="section-title">Ready to Enhance Senior Care?</h2>
+        <p class="section-desc">
+          Download the pre-compiled Android App debug build or read the setup instructions to connect to your own Firebase project.
+        </p>
+      </div>
+
+      <div class="glass-panel" style="max-width: 700px; margin: 0 auto; padding: 4rem 2rem; display: flex; flex-direction: column; gap: 2rem; align-items: center;">
+        <h3>OldAgeHomeApp Android APK</h3>
+        <p style="max-width: 500px; margin: 0 auto;">
+          The package includes the full user role dashboard system, resident profiles, medical record listings, appointments scheduling, and Firebase notification integration.
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+          <a href="assets/app-debug.apk" download class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+            <i class="fa-solid fa-download"></i> Download app-debug.apk
+          </a>
+          <a href="https://github.com/cimilcharly/Serenity-Haven" target="_blank" class="btn btn-secondary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+            <i class="fa-brands fa-github"></i> View GitHub Repository
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#" class="logo-container">
+        <img src="assets/logo.png" alt="Serenity Logo" class="logo-img">
+        <span class="logo-text">Serenity</span>
+      </a>
+      <ul class="footer-nav">
+        <li><a href="#roles">Roles</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#demo">Live Demo</a></li>
+      </ul>
+      <p class="footer-copyright">
+        &copy; 2026 Serenity. Managed open-source codebase for Senior Living Communities.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Interactive Script -->
+  <script>
+    // Shrink Navbar on Scroll
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Interactive Emulator Logic
+    const roleButtons = document.querySelectorAll('.btn-phone-role');
+    const submitBtn = document.getElementById('btn-login-submit');
+    const loginScreen = document.getElementById('screen-login');
+    const logoutBtns = document.querySelectorAll('.btn-logout');
+    
+    let selectedRole = 'admin';
+
+    // Handle Role Selection
+    roleButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        roleButtons.forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        selectedRole = btn.getAttribute('data-role');
+        
+        // Update Submit Button Text
+        const capitalizedRole = selectedRole.charAt(0).toUpperCase() + selectedRole.slice(1);
+        submitBtn.textContent = `Login as ${capitalizedRole}`;
+      });
+    });
+
+    // Handle Login Submit
+    submitBtn.addEventListener('click', () => {
+      // Hide Login Screen
+      loginScreen.classList.remove('active');
+      
+      // Show Target Dashboard Screen
+      const targetScreen = document.getElementById(`screen-${selectedRole}`);
+      if (targetScreen) {
+        targetScreen.classList.add('active');
+      }
+    });
+
+    // Handle Logout / Back Buttons
+    logoutBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Hide all dashboard screens
+        document.querySelectorAll('.screen').forEach(screen => {
+          screen.classList.remove('active');
+        });
+        
+        // Show Login Screen
+        loginScreen.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

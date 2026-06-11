@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Serenity Haven</string>
+    <string name="login_title">Welcome Back</string>
+    <string name="signup_title">Create Account</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
+    <string name="signup_button">Sign Up</string>
+    <string name="loading">Loading...</string>
+    <string name="role_admin">Admin</string>
+    <string name="role_doctor">Doctor</string>
+    <string name="role_staff">Staff</string>
+    <string name="role_receptionist">Receptionist</string>
+</resources>

@@ -1,0 +1,17 @@
+# Android build artifacts
+OldAgeHomeApp/.gradle/
+OldAgeHomeApp/.idea/
+OldAgeHomeApp/app/build/
+OldAgeHomeApp/build/
+OldAgeHomeApp/local.properties
+
+# Gradle wrapper jar (binary, large)
+OldAgeHomeApp/gradle/wrapper/gradle-wrapper.jar
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
