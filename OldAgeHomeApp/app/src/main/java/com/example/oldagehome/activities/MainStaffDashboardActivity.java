@@ -218,25 +218,36 @@ public class MainStaffDashboardActivity extends AppCompatActivity {
         com.google.android.material.textfield.TextInputEditText etEmail = dialogView.findViewById(R.id.etInviteEmail);
         com.google.android.material.textfield.TextInputEditText etNote = dialogView.findViewById(R.id.etInviteNote);
 
-        new androidx.appcompat.app.AlertDialog.Builder(this)
+        androidx.appcompat.app.AlertDialog dialog = new androidx.appcompat.app.AlertDialog.Builder(this)
                 .setView(dialogView)
-                .setPositiveButton("Send Email", (dialog, which) -> {
-                    String recipientEmail = etEmail.getText().toString().trim();
-                    String note = etNote.getText().toString().trim();
+                .create();
 
-                    if (recipientEmail.isEmpty()) {
-                        android.widget.Toast.makeText(this, "Email is required", android.widget.Toast.LENGTH_SHORT).show();
-                        return;
-                    }
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(android.graphics.Color.TRANSPARENT));
+        }
 
-                    sendInvitationEmail(recipientEmail, note);
-                })
-                .setNeutralButton("Share Link", (dialog, which) -> {
-                    String note = etNote.getText().toString().trim();
-                    shareInvitationLink(note);
-                })
-                .setNegativeButton("Cancel", null)
-                .show();
+        dialogView.findViewById(R.id.btnCancel).setOnClickListener(v -> dialog.dismiss());
+
+        dialogView.findViewById(R.id.btnShareLink).setOnClickListener(v -> {
+            String note = etNote.getText().toString().trim();
+            shareInvitationLink(note);
+            dialog.dismiss();
+        });
+
+        dialogView.findViewById(R.id.btnSendEmail).setOnClickListener(v -> {
+            String recipientEmail = etEmail.getText().toString().trim();
+            String note = etNote.getText().toString().trim();
+
+            if (recipientEmail.isEmpty()) {
+                android.widget.Toast.makeText(this, "Email is required", android.widget.Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            sendInvitationEmail(recipientEmail, note);
+            dialog.dismiss();
+        });
+
+        dialog.show();
     }
 
     private void shareInvitationLink(String note) {
