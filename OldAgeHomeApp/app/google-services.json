@@ -12,7 +12,20 @@
           "package_name": "com.example.oldagehome"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "70230529493-cag1ltbu1kp9p95dks31kf1662epbk97.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oldagehome",
+            "certificate_hash": "e147970c4bda93050b9a8a8a0d47fa897db08936"
+          }
+        },
+        {
+          "client_id": "70230529493-bjdimmr09faonq36qdkgi32dumohlp9g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDHVbFEufgoT0VSHF0DwQ0q0qSAAW3konk"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "70230529493-bjdimmr09faonq36qdkgi32dumohlp9g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

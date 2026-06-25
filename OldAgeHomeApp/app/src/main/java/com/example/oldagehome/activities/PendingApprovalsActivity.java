@@ -54,6 +54,25 @@ public class PendingApprovalsActivity extends AppCompatActivity {
                 if (communityId != null) {
                     fetchPendingResidents();
                     fetchApprovedResidents();
+                } else {
+                    db.collection("communities").whereEqualTo("creatorUid", uid).get()
+                            .addOnSuccessListener(querySnapshot -> {
+                                if (querySnapshot != null && !querySnapshot.isEmpty()) {
+                                    com.google.firebase.firestore.DocumentSnapshot commDoc = querySnapshot.getDocuments().get(0);
+                                    communityId = commDoc.getId();
+                                    String communityName = commDoc.getString("name");
+                                    if (communityId != null) {
+                                        java.util.Map<String, Object> updates = new java.util.HashMap<>();
+                                        updates.put("communityId", communityId);
+                                        if (communityName != null) {
+                                            updates.put("communityName", communityName);
+                                        }
+                                        db.collection("users").document(uid).update(updates);
+                                        fetchPendingResidents();
+                                        fetchApprovedResidents();
+                                    }
+                                }
+                            });
                 }
             }
         });
