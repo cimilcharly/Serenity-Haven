@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serenity - Premium Old Age Home Management App</title>
-  <meta name="description" content="Serenity is a Native Android Application designed for seamless coordination and high-quality care in Senior Living communities.">
+  <meta name="description"
+    content="Serenity is a Native Android Application designed for seamless coordination and high-quality care in Senior Living communities.">
   <link rel="stylesheet" href="index.css">
-  
+
   <!-- Add FontAwesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <style>
     /* Inline Styles for the Interactive Phone Prototype */
     .phone-screen {
@@ -22,7 +24,8 @@
       flex-direction: column;
       position: relative;
       user-select: none;
-      padding-top: 25px; /* Notch space */
+      padding-top: 25px;
+      /* Notch space */
     }
 
     .phone-status-bar {
@@ -52,10 +55,13 @@
       flex-direction: column;
       position: relative;
       overflow-y: auto;
-      scrollbar-width: none; /* Hide scrollbar for Firefox */
+      scrollbar-width: none;
+      /* Hide scrollbar for Firefox */
     }
+
     .phone-content-area::-webkit-scrollbar {
-      display: none; /* Hide scrollbar for Chrome/Safari */
+      display: none;
+      /* Hide scrollbar for Chrome/Safari */
     }
 
     /* Screen Styles */
@@ -333,11 +339,23 @@
       font-weight: bold;
     }
 
-    .badge-success { background: rgba(46, 204, 113, 0.2); color: #2ecc71; }
-    .badge-warning { background: rgba(241, 196, 15, 0.2); color: #f1c40f; }
-    .badge-info { background: rgba(52, 152, 219, 0.2); color: #3498db; }
+    .badge-success {
+      background: rgba(46, 204, 113, 0.2);
+      color: #2ecc71;
+    }
+
+    .badge-warning {
+      background: rgba(241, 196, 15, 0.2);
+      color: #f1c40f;
+    }
+
+    .badge-info {
+      background: rgba(52, 152, 219, 0.2);
+      color: #3498db;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Navigation Bar -->
@@ -363,8 +381,9 @@
         <div class="hero-tag">Android Application</div>
         <h1 class="hero-title">Care Coordination, <br><span class="gradient-text">Made Effortless.</span></h1>
         <p class="hero-description">
-          Serenity is a Native Android App designed specifically for senior living and old age homes. 
-          Empower your administrators, medical teams, and caregivers with instant updates, structured schedules, and seamless communication.
+          Serenity is a Native Android App designed specifically for senior living and old age homes.
+          Empower your administrators, medical teams, and caregivers with instant updates, structured schedules, and
+          seamless communication.
         </p>
         <div class="hero-actions">
           <a href="#download" class="btn btn-primary">
@@ -474,7 +493,8 @@
           </div>
           <div class="feature-info">
             <h3 class="feature-title">Detailed Resident Directory</h3>
-            <p>Maintain detailed profile histories, emergency contacts, room assignments, and doctor notes in one unified cloud database (Firebase Firestore).</p>
+            <p>Maintain detailed profile histories, emergency contacts, room assignments, and doctor notes in one
+              unified cloud database (Firebase Firestore).</p>
           </div>
         </div>
 
@@ -485,7 +505,8 @@
           </div>
           <div class="feature-info">
             <h3 class="feature-title">Appointment Scheduling</h3>
-            <p>Receptionists can book checkups directly with doctors. Doctors receive live notification cards and schedule updates on their dashboards.</p>
+            <p>Receptionists can book checkups directly with doctors. Doctors receive live notification cards and
+              schedule updates on their dashboards.</p>
           </div>
         </div>
 
@@ -496,7 +517,8 @@
           </div>
           <div class="feature-info">
             <h3 class="feature-title">Medication Logs</h3>
-            <p>Ensure prescriptions are administered precisely. Staff and nurses can view schedule timings and update completed dosages in real time.</p>
+            <p>Ensure prescriptions are administered precisely. Staff and nurses can view schedule timings and update
+              completed dosages in real time.</p>
           </div>
         </div>
 
@@ -507,7 +529,8 @@
           </div>
           <div class="feature-info">
             <h3 class="feature-title">FCM Push Notifications</h3>
-            <p>Powered by Firebase Cloud Messaging. Instantly alert specific doctors of emergency updates or upcoming checkups, keeping response times under minutes.</p>
+            <p>Powered by Firebase Cloud Messaging. Instantly alert specific doctors of emergency updates or upcoming
+              checkups, keeping response times under minutes.</p>
           </div>
         </div>
       </div>
@@ -528,7 +551,7 @@
       <div class="demo-showcase">
         <div class="phone-wrapper">
           <div class="phone-notch"></div>
-          
+
           <div class="phone-screen">
             <!-- Simulated Android Top Bar -->
             <div class="phone-status-bar">
@@ -542,7 +565,7 @@
 
             <!-- Content Area inside Phone -->
             <div class="phone-content-area">
-              
+
               <!-- Screen 1: Login Screen -->
               <div class="screen screen-login active" id="screen-login">
                 <div class="phone-logo">
@@ -552,7 +575,7 @@
                   <h4>Serenity</h4>
                   <p>Old Age Home Care</p>
                 </div>
-                
+
                 <div class="login-form">
                   <span class="role-select-title">Choose Role to Demo</span>
                   <div class="role-buttons">
@@ -569,10 +592,11 @@
                       <i class="fa-solid fa-clipboard-user"></i> Receptionist
                     </button>
                   </div>
-                  
-                  <input type="text" class="phone-input" placeholder="Email Address" value="demo@serenity.care" disabled>
+
+                  <input type="text" class="phone-input" placeholder="Email Address" value="demo@serenity.care"
+                    disabled>
                   <input type="password" class="phone-input" placeholder="Password" value="••••••••" disabled>
-                  
+
                   <button class="btn-phone-submit" id="btn-login-submit">Login as Admin</button>
                 </div>
               </div>
@@ -768,34 +792,42 @@
           </div>
         </div>
       </div>
-      
+
       <div class="demo-instructions">
-        <p><i class="fa-solid fa-circle-info"></i> Note: This interactive dashboard demonstrates the flow designed in the native Kotlin/Java codebase. For hosting a full production live mobile demo, you can build your APK and host it on <code>Appetize.io</code> to embed a real live android emulator container here.</p>
+        <p><i class="fa-solid fa-circle-info"></i> Note: This interactive dashboard demonstrates the flow designed in
+          the native Kotlin/Java codebase. For hosting a full production live mobile demo, you can build your APK and
+          host it on <code>Appetize.io</code> to embed a real live android emulator container here.</p>
       </div>
     </div>
   </section>
 
   <!-- Download & Repo Details -->
-  <section class="section" id="download" style="background: linear-gradient(180deg, var(--bg-primary) 0%, #121424 100%);">
+  <section class="section" id="download"
+    style="background: linear-gradient(180deg, var(--bg-primary) 0%, #121424 100%);">
     <div class="container" style="text-align: center;">
       <div class="section-header">
         <span class="section-tag" style="color: var(--secondary);">Get Started</span>
         <h2 class="section-title">Ready to Enhance Senior Care?</h2>
         <p class="section-desc">
-          Download the pre-compiled Android App debug build or read the setup instructions to connect to your own Firebase project.
+          Download the pre-compiled Android App debug build or read the setup instructions to connect to your own
+          Firebase project.
         </p>
       </div>
 
-      <div class="glass-panel" style="max-width: 700px; margin: 0 auto; padding: 4rem 2rem; display: flex; flex-direction: column; gap: 2rem; align-items: center;">
+      <div class="glass-panel"
+        style="max-width: 700px; margin: 0 auto; padding: 4rem 2rem; display: flex; flex-direction: column; gap: 2rem; align-items: center;">
         <h3>Serenity Haven Android APK</h3>
         <p style="max-width: 500px; margin: 0 auto;">
-          The package includes the full user role dashboard system, resident profiles, medical record listings, appointments scheduling, and Firebase notification integration.
+          The package includes the full user role dashboard system, resident profiles, medical record listings,
+          appointments scheduling, and Firebase notification integration.
         </p>
         <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-          <a href="assets/serenity-haven.apk" download class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+          <a href="assets/serenity-haven.apk" download class="btn btn-primary"
+            style="font-size: 1.1rem; padding: 1rem 2rem;">
             <i class="fa-solid fa-download"></i> Download Serenity Haven APK
           </a>
-          <a href="https://github.com/cimilcharly/Serenity-Haven" target="_blank" class="btn btn-secondary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+          <a href="https://github.com/cimilcharly/Serenity-Haven" target="_blank" class="btn btn-secondary"
+            style="font-size: 1.1rem; padding: 1rem 2rem;">
             <i class="fa-brands fa-github"></i> View GitHub Repository
           </a>
         </div>
@@ -838,7 +870,7 @@
     const submitBtn = document.getElementById('btn-login-submit');
     const loginScreen = document.getElementById('screen-login');
     const logoutBtns = document.querySelectorAll('.btn-logout');
-    
+
     let selectedRole = 'admin';
 
     // Handle Role Selection
@@ -847,7 +879,7 @@
         roleButtons.forEach(b => b.classList.remove('selected'));
         btn.classList.add('selected');
         selectedRole = btn.getAttribute('data-role');
-        
+
         // Update Submit Button Text
         const capitalizedRole = selectedRole.charAt(0).toUpperCase() + selectedRole.slice(1);
         submitBtn.textContent = `Login as ${capitalizedRole}`;
@@ -858,7 +890,7 @@
     submitBtn.addEventListener('click', () => {
       // Hide Login Screen
       loginScreen.classList.remove('active');
-      
+
       // Show Target Dashboard Screen
       const targetScreen = document.getElementById(`screen-${selectedRole}`);
       if (targetScreen) {
@@ -873,11 +905,12 @@
         document.querySelectorAll('.screen').forEach(screen => {
           screen.classList.remove('active');
         });
-        
+
         // Show Login Screen
         loginScreen.classList.add('active');
       });
     });
   </script>
 </body>
+
 </html>
