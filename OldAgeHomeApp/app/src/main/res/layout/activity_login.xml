@@ -107,6 +107,50 @@
                         app:cornerRadius="16dp"
                         android:backgroundTint="@color/brand_start" />
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="16dp">
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/text_grey"
+                            android:alpha="0.3" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OR"
+                            android:textColor="@color/text_grey"
+                            android:textSize="12sp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/text_grey"
+                            android:alpha="0.3" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/googleLoginBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:text="Continue with Google"
+                        android:layout_marginTop="16dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_dark"
+                        app:cornerRadius="16dp"
+                        android:backgroundTint="@color/white"
+                        app:strokeColor="@color/text_grey"
+                        app:strokeWidth="1dp"
+                        app:icon="@drawable/ic_google"
+                        app:iconTint="@null"
+                        app:iconGravity="textStart" />
+
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

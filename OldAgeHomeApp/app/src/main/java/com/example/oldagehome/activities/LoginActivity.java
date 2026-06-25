@@ -5,9 +5,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.oldagehome.R;
 import com.example.oldagehome.databinding.ActivityLoginBinding;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -21,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     private ActivityLoginBinding binding;
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
+    private GoogleSignInClient mGoogleSignInClient;
 
     private final ActivityResultLauncher<String> requestPermissionLauncher = registerForActivityResult(
             new ActivityResultContracts.RequestPermission(), isGranted -> {
@@ -29,6 +38,23 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(this, "Notifications disabled. You might miss important alerts.", Toast.LENGTH_LONG)
                             .show();
+                }
+            });
+
+    private final ActivityResultLauncher<Intent> googleSignInLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == RESULT_OK && result.getData() != null) {
+                    com.google.android.gms.tasks.Task<GoogleSignInAccount> task =
+                            GoogleSignIn.getSignedInAccountFromIntent(result.getData());
+                    try {
+                        GoogleSignInAccount account = task.getResult(ApiException.class);
+                        if (account != null) {
+                            firebaseAuthWithGoogle(account.getIdToken());
+                        }
+                    } catch (ApiException e) {
+                        Toast.makeText(this, "Google sign in failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
                 }
             });
 
@@ -41,6 +67,13 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
 
+        // Configure Google Sign In
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
         askNotificationPermission();
 
         if (mAuth.getCurrentUser() != null) {
@@ -48,6 +81,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         binding.loginBtn.setOnClickListener(v -> loginUser());
+        binding.googleLoginBtn.setOnClickListener(v -> signInWithGoogle());
         binding.signupTv.setOnClickListener(v -> startActivity(new Intent(this, SignupActivity.class)));
         binding.forgotPasswordTv.setOnClickListener(v -> startActivity(new Intent(this, ForgotPasswordActivity.class)));
     }
@@ -100,7 +134,10 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(this, "Invalid user status.", Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        Toast.makeText(this, "User data not found.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Please complete your registration profile.", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(this, SignupActivity.class);
+                        intent.putExtra("complete_profile", true);
+                        startActivity(intent);
                     }
                 })
                 .addOnFailureListener(e -> {
@@ -109,11 +146,35 @@ public class LoginActivity extends AppCompatActivity {
                 });
     }
 
+    private void signInWithGoogle() {
+        mGoogleSignInClient.signOut().addOnCompleteListener(task -> {
+            Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+            googleSignInLauncher.launch(signInIntent);
+        });
+    }
+
+    private void firebaseAuthWithGoogle(String idToken) {
+        binding.progressBar.setVisibility(View.VISIBLE);
+        AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful() && mAuth.getCurrentUser() != null) {
+                        checkUserRole(mAuth.getCurrentUser().getUid());
+                    } else {
+                        binding.progressBar.setVisibility(View.GONE);
+                        Toast.makeText(LoginActivity.this, "Authentication Failed: " +
+                                        (task.getException() != null ? task.getException().getMessage() : "Unknown Error"),
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
     private void navigateToDashboard(String role) {
         Intent intent;
         if (com.example.oldagehome.utils.RoleManager.ROLE_STAFF.equals(role)) {
             intent = new Intent(this, MainStaffDashboardActivity.class);
-        } else if (com.example.oldagehome.utils.RoleManager.ROLE_RESIDENT.equals(role)) {
+        } else if (com.example.oldagehome.utils.RoleManager.ROLE_RESIDENT.equals(role) || 
+                   com.example.oldagehome.utils.RoleManager.ROLE_ME.equals(role)) {
             intent = new Intent(this, ResidentDashboardActivity.class);
         } else {
             Toast.makeText(this, "Role not recognized: " + role, Toast.LENGTH_SHORT).show();

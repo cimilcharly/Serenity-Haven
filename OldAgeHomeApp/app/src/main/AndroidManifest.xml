@@ -33,7 +33,22 @@
             android:name=".activities.LoginActivity"
             android:exported="false" />
 
-        <activity android:name=".activities.SignupActivity" />
+        <activity android:name=".activities.SignupActivity"
+            android:exported="true">
+            <intent-filter android:label="Join Serenity Haven">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="serenityhaven" android:host="invite" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true" android:label="Join Serenity Haven">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="cimilcharly.github.io" android:pathPrefix="/Serenity-Haven/join.html" />
+                <data android:scheme="https" android:host="cimilcharly.github.io" android:pathPrefix="/Serenity-Haven/join.html" />
+            </intent-filter>
+        </activity>
         <activity android:name=".activities.AdminDashboardActivity" />
         <activity android:name=".activities.DoctorDashboardActivity" />
         <activity android:name=".activities.StaffDashboardActivity" />
