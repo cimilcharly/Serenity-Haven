@@ -20,6 +20,11 @@ public class AlarmReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         final PendingResult pendingResult = goAsync();
+        
+        // Check if notifications are disabled in user settings
+        android.content.SharedPreferences prefs = context.getSharedPreferences("app_settings", Context.MODE_PRIVATE);
+        boolean notificationsEnabled = prefs.getBoolean("notifications_enabled", true);
+
         String medicineName = intent.getStringExtra("medicineName");
         String residentId = intent.getStringExtra("residentId");
         String userEmail = intent.getStringExtra("userEmail");
@@ -63,10 +68,12 @@ public class AlarmReceiver extends BroadcastReceiver {
             }
         }
 
-        showNotification(context, title, message, residentId, medicineName);
+        if (notificationsEnabled) {
+            showNotification(context, title, message, residentId, medicineName);
+        }
 
         // Chain operations: Email -> Medicine Update -> Finish
-        if (userEmail != null && !userEmail.isEmpty()) {
+        if (notificationsEnabled && userEmail != null && !userEmail.isEmpty()) {
             final String finalTitle = title;
             final String finalMessage = message;
             new Thread(() -> {

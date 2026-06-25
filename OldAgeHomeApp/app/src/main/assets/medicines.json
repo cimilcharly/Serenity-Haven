@@ -1,0 +1,2002 @@
+[
+    {
+        "name": "Crocin Pain Relief",
+        "category": "Pain Relief",
+        "description": "Contains Paracetamol & Caffeine for fast relief from headache and body pain.",
+        "price": "₹38",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Crocin+Pain+Relief",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Avoid taking with other paracetamol-containing medicines. Limiting alcohol is advised."
+    },
+    {
+        "name": "Combiflam Tablets",
+        "category": "Pain Relief",
+        "description": "Effective relief from muscular pain, joint pain, dental pain, and fever.",
+        "price": "₹45",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Combiflam+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Take after meals to avoid stomach irritation."
+    },
+    {
+        "name": "Dolo 650 Tablets",
+        "category": "Pain Relief",
+        "description": "Most widely prescribed paracetamol for fever and mild to moderate pain relief.",
+        "price": "₹34",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Dolo+650+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Keep a minimum 4-6 hour gap between doses. Do not exceed 4 tablets a day."
+    },
+    {
+        "name": "Saridon Headache Tablet",
+        "category": "Pain Relief",
+        "description": "Unique triple-action formula for quick and effective headache relief.",
+        "price": "₹42",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Saridon+Headache+Tablet",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Not recommended for children below 12 years of age."
+    },
+    {
+        "name": "Zerodol-SP Tablets",
+        "category": "Pain Relief",
+        "description": "Combines Aceclofenac, Paracetamol & Serratiopeptidase to reduce pain and swelling.",
+        "price": "₹120",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Zerodol-SP+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "May cause drowsiness. Avoid driving after taking this medicine."
+    },
+    {
+        "name": "Flexon Tablets",
+        "category": "Pain Relief",
+        "description": "Combination of Ibuprofen & Paracetamol for bodyache, joint pain, and fever.",
+        "price": "₹28",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Flexon+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not take if you have a history of stomach ulcers or asthma."
+    },
+    {
+        "name": "Ultracet Tablets",
+        "category": "Pain Relief",
+        "description": "Combination of Tramadol & Paracetamol for severe acute pain relief.",
+        "price": "₹240",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Ultracet+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Prescription drug. Use strictly as directed by a physician."
+    },
+    {
+        "name": "Dynapar QPS Pain Relief Spray",
+        "category": "Pain Relief",
+        "description": "Quick Penetrating Solution for instant relief from neck, shoulder, and back pain.",
+        "price": "₹190",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Dynapar+QPS+Pain+Relief+Spray",
+        "imageResName": "med_ointment_tube",
+        "safetyTip": "For external use only. Do not apply on open wounds or cuts."
+    },
+    {
+        "name": "Pacimol 650 Tablets",
+        "category": "Pain Relief",
+        "description": "Paracetamol formulation used for treating high fever and body ache.",
+        "price": "₹30",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Pacimol+650+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Check for liver or kidney disease before using paracetamol regularly."
+    },
+    {
+        "name": "Sumo Tablets",
+        "category": "Pain Relief",
+        "description": "Combination of Nimesulide and Paracetamol for acute pain and inflammatory conditions.",
+        "price": "₹115",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Sumo+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Should not be used long-term due to risk of liver toxicity."
+    },
+    {
+        "name": "Calpol 500 Tablets",
+        "category": "Pain Relief",
+        "description": "A trusted fever-reducing and analgesic tablet for all age groups.",
+        "price": "₹16",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Calpol+500+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Store in a cool dry place away from direct sunlight."
+    },
+    {
+        "name": "Meftal-Spas Tablets",
+        "category": "Pain Relief",
+        "description": "Commonly used for relief from menstrual cramps, muscle spasms, and colic pain.",
+        "price": "₹50",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Meftal-Spas+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Take with food to minimize gastrointestinal discomfort."
+    },
+    {
+        "name": "Zerodol-P Tablets",
+        "category": "Pain Relief",
+        "description": "Combines Aceclofenac and Paracetamol for relief from muscle and joint pains.",
+        "price": "₹60",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Zerodol-P+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Avoid taking if allergic to pain relief medicines like aspirin."
+    },
+    {
+        "name": "Volini Pain Relief Gel",
+        "category": "Pain Relief",
+        "description": "Quick action gel for back pain, joint pain, neck pain, and sprains.",
+        "price": "₹145",
+        "platform": "Flipkart",
+        "purchaseUrl": "https://www.flipkart.com/search?q=Volini+Pain+Relief+Gel",
+        "imageResName": "med_ointment_tube",
+        "safetyTip": "Wash hands thoroughly after applying. Keep away from eyes."
+    },
+    {
+        "name": "Moov Pain Relief Spray",
+        "category": "Pain Relief",
+        "description": "100% Ayurvedic preparation for fast relief from muscle pain and backache.",
+        "price": "₹180",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Moov+Pain+Relief+Spray",
+        "imageResName": "med_ointment_tube",
+        "safetyTip": "Do not spray near open flames or heat sources."
+    },
+    {
+        "name": "Zandu Balm",
+        "category": "Pain Relief",
+        "description": "India's No. 1 pain relief balm for headache, body ache, and cold symptoms.",
+        "price": "₹50",
+        "platform": "Flipkart",
+        "purchaseUrl": "https://www.flipkart.com/search?q=Zandu+Balm",
+        "imageResName": "med_vaporub_jar",
+        "safetyTip": "Apply gently on affected areas. Do not rub vigorously on sensitive skin."
+    },
+    {
+        "name": "Amrutanjan Strong Pain Balm",
+        "category": "Pain Relief",
+        "description": "Ayurvedic balm designed with wintergreen oil and menthol for severe headaches.",
+        "price": "₹65",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Amrutanjan+Strong+Pain+Balm",
+        "imageResName": "med_vaporub_jar",
+        "safetyTip": "Avoid contact with mucous membranes, eyes, and nostrils."
+    },
+    {
+        "name": "Iodex UltraFast Gel",
+        "category": "Pain Relief",
+        "description": "Penetrates deep to reduce inflammation and provide quick relief from sprains.",
+        "price": "₹90",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Iodex+UltraFast+Gel",
+        "imageResName": "med_ointment_tube",
+        "safetyTip": "Do not wrap or bandage tightly over the applied area."
+    },
+    {
+        "name": "Voveran SR 100 Tablets",
+        "category": "Pain Relief",
+        "description": "Sustained release Diclofenac tablet used to treat severe arthritis and joint pain.",
+        "price": "₹102",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Voveran+SR+100+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Prescription required. Regularly monitor kidney/liver functions if used long term."
+    },
+    {
+        "name": "Naprosyn 500 Tablets",
+        "category": "Pain Relief",
+        "description": "Naproxen non-steroidal anti-inflammatory tablet for relief from gout and joint stiffness.",
+        "price": "₹70",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Naprosyn+500+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Drink plenty of water. Can cause mild stomach upset."
+    },
+    {
+        "name": "Aspirin (Ecosprin 75) Tablets",
+        "category": "Pain Relief",
+        "description": "Low-dose aspirin used as a blood thinner and anti-inflammatory agent.",
+        "price": "₹6",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Aspirin+(Ecosprin+75)+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Take strictly as prescribed. Do not stop suddenly."
+    },
+    {
+        "name": "Ark Gel",
+        "category": "Pain Relief",
+        "description": "Diclofenac diethylamine gel for instant relief from sprains and neck strains.",
+        "price": "₹85",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Ark+Gel",
+        "imageResName": "med_ointment_tube",
+        "safetyTip": "Do not apply on broken, sunburnt, or infected skin."
+    },
+    {
+        "name": "Anacin Tablets",
+        "category": "Pain Relief",
+        "description": "Combines Aspirin & Caffeine to offer rapid headache and toothache relief.",
+        "price": "₹22",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Anacin+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Avoid use if you have bleeding disorders or severe asthma."
+    },
+    {
+        "name": "Nurofen Ibuprofen 200 Tablets",
+        "category": "Pain Relief",
+        "description": "Imported targeted pain relief capsules for severe headaches and dental pain.",
+        "price": "₹450",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Ibuprofen+Tablets",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Take with milk or food to protect the stomach lining."
+    },
+    {
+        "name": "Cataflam 50mg Tablets",
+        "category": "Pain Relief",
+        "description": "Diclofenac potassium tablets for immediate relief of painful acute conditions.",
+        "price": "₹130",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Cataflam+50mg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Ensure you stay hydrated to support your kidneys."
+    },
+    {
+        "name": "Brufen 400 Tablets",
+        "category": "Pain Relief",
+        "description": "Well known Ibuprofen formulation to treat inflammation, pain, and fever.",
+        "price": "₹15",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Brufen+400+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Long term usage can increase risk of cardiovascular issues."
+    },
+    {
+        "name": "Ketanov Tablets",
+        "category": "Pain Relief",
+        "description": "Ketorolac tromethamine tablet for short-term management of moderate to severe dental pain.",
+        "price": "₹82",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Ketanov+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not take for more than 5 consecutive days."
+    },
+    {
+        "name": "Dolonex DT 20 Tablets",
+        "category": "Pain Relief",
+        "description": "Dispersible Piroxicam tablet for osteoarthritic joint pain and back stiffness.",
+        "price": "₹210",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Dolonex+DT+20+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Dissolve completely in a glass of water before drinking."
+    },
+    {
+        "name": "Nimulid Safetab Tablets",
+        "category": "Pain Relief",
+        "description": "Nimesulide dispersible tablet for rapid recovery from painful muscular spasms.",
+        "price": "₹95",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Nimulid+Safetab+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Banned in some age groups. Take strictly under doctor guidance."
+    },
+    {
+        "name": "Crocin 650 Tablets",
+        "category": "Pain Relief",
+        "description": "Standard high strength paracetamol tablet for high fever relief.",
+        "price": "₹32",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Crocin+650+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Wait at least 4 hours before taking another dose of paracetamol."
+    },
+    {
+        "name": "Digene Antacid Tablets (Mint)",
+        "category": "Digestion & Antacids",
+        "description": "Provides quick relief from acidity, heartburn, gas, and stomach discomfort.",
+        "price": "₹24",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Digene+Antacid+Tablets",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Chew the tablets thoroughly before swallowing for the best effect."
+    },
+    {
+        "name": "Eno Fruit Salt (Lemon)",
+        "category": "Digestion & Antacids",
+        "description": "Quick-acting antacid powder that relieves acidity and stomach gas in 6 seconds.",
+        "price": "₹60",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Eno+Fruit+Salt+(Lemon)",
+        "imageResName": "med_powder_sachet",
+        "safetyTip": "Do not take more than 2 sachets a day. Do not use for more than 14 days."
+    },
+    {
+        "name": "Eno Regular Sachets",
+        "category": "Digestion & Antacids",
+        "description": "Effervescent antacid powder for fast relief from bloating, gas, and acidity.",
+        "price": "₹8",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Eno+Regular+Sachets",
+        "imageResName": "med_powder_sachet",
+        "safetyTip": "Dissolve completely in water before consuming."
+    },
+    {
+        "name": "Pudin Hara Active Liquid",
+        "category": "Digestion & Antacids",
+        "description": "Quick Ayurvedic relief from stomach ache, gas, and indigestion.",
+        "price": "₹25",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Pudin+Hara+Active+Liquid",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Dilute with a glass of water. Not recommended for children below 12."
+    },
+    {
+        "name": "Pudin Hara Pearls Capsules",
+        "category": "Digestion & Antacids",
+        "description": "Cooling mint oil capsules providing quick relief from flatulence and indigestion.",
+        "price": "₹30",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Pudin+Hara+Pearls+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Swallow whole with water. Do not chew or bite the capsule."
+    },
+    {
+        "name": "Gelusil MPS Liquid (Mint)",
+        "category": "Digestion & Antacids",
+        "description": "Well known antacid syrup that coats the stomach lining and absorbs gas.",
+        "price": "₹120",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Gelusil+MPS+Liquid+(Mint)",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Shake well before use. Best taken 30-60 minutes after meals."
+    },
+    {
+        "name": "Gelusil MPS Tablets",
+        "category": "Digestion & Antacids",
+        "description": "Chewable antacid tablets for fast relief of gas, bloating, and stomach burn.",
+        "price": "₹35",
+        "platform": "Flipkart",
+        "purchaseUrl": "https://www.flipkart.com/search?q=Gelusil+MPS+Tablets",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Keep away from children. Chew well."
+    },
+    {
+        "name": "Omez 20 Capsules",
+        "category": "Digestion & Antacids",
+        "description": "Omeprazole capsules used to reduce acid production and treat GERD.",
+        "price": "₹55",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Omez+20+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Best taken in the morning on an empty stomach, at least 30 mins before food."
+    },
+    {
+        "name": "Pantocid 40 Tablets",
+        "category": "Digestion & Antacids",
+        "description": "Pantoprazole tablet used for acid reflux, peptic ulcers, and stomach irritation.",
+        "price": "₹150",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Pantocid+40+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Swallow whole, do not crush or chew the tablet."
+    },
+    {
+        "name": "Pan-D Capsules",
+        "category": "Digestion & Antacids",
+        "description": "Combines Pantoprazole & Domperidone for severe nausea, vomiting, and acid reflux.",
+        "price": "₹190",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Pan-D+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Avoid drinking alcohol, as it worsens stomach acid production."
+    },
+    {
+        "name": "Rabekind 20 Tablets",
+        "category": "Digestion & Antacids",
+        "description": "Rabeprazole sodium tablets used to heal ulcers and curb hyperacidity.",
+        "price": "₹85",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Rabekind+20+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Notify your doctor if you experience watery stool or bone pain."
+    },
+    {
+        "name": "Rantac 150 Tablets",
+        "category": "Digestion & Antacids",
+        "description": "Ranitidine tablets for treating stomach ulcers and reducing overall acid.",
+        "price": "₹42",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Rantac+150+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Avoid spicy foods and caffeine while undergoing therapy."
+    },
+    {
+        "name": "Aciloc 150 Tablets",
+        "category": "Digestion & Antacids",
+        "description": "Cost-effective ranitidine tablets for heartburn, indigestion, and acid lock.",
+        "price": "₹38",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Aciloc+150+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Consult your doctor if symptoms persist beyond a week."
+    },
+    {
+        "name": "Cremaffin Liquid Syrup",
+        "category": "Digestion & Antacids",
+        "description": "Gentle laxative syrup combining milk of magnesia and liquid paraffin for constipation.",
+        "price": "₹280",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Cremaffin+Liquid+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Drink a glass of water after consuming. Do not use for long durations without advice."
+    },
+    {
+        "name": "Duphalac Syrup",
+        "category": "Digestion & Antacids",
+        "description": "Lactulose solution for safe, natural relief from chronic constipation and digestive regulation.",
+        "price": "₹350",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Duphalac+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "May cause gas or abdominal cramps initially, which usually settles down."
+    },
+    {
+        "name": "Zantac Tablets",
+        "category": "Digestion & Antacids",
+        "description": "Famotidine/Ranitidine compound used for prevention of nocturnal acid production.",
+        "price": "₹120",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Zantac+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Ideally taken at bedtime to control night-time acidity."
+    },
+    {
+        "name": "Isabgol Powder (Sat-Isabgol)",
+        "category": "Digestion & Antacids",
+        "description": "Natural Psyllium Husk dietary fiber supplement for regular bowel movement.",
+        "price": "₹180",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Isabgol+Powder",
+        "imageResName": "med_powder_sachet",
+        "safetyTip": "Must be dissolved in plenty of water or milk to avoid choking hazards."
+    },
+    {
+        "name": "Himalaya Gasex Tablets",
+        "category": "Digestion & Antacids",
+        "description": "Ayurvedic tablets combining natural extracts like Cowrie Bhasma for bloating.",
+        "price": "₹130",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Himalaya+Gasex",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Take 2 tablets twice a day after meals."
+    },
+    {
+        "name": "Kayam Churna Powder",
+        "category": "Digestion & Antacids",
+        "description": "Famous Ayurvedic formulation for chronic constipation, acidity, and headache.",
+        "price": "₹95",
+        "platform": "Flipkart",
+        "purchaseUrl": "https://www.flipkart.com/search?q=Kayam+Churna",
+        "imageResName": "med_powder_sachet",
+        "safetyTip": "Overuse can lead to dependency and loose motions."
+    },
+    {
+        "name": "Digene Gel Liquid (Orange)",
+        "category": "Digestion & Antacids",
+        "description": "High-efficacy liquid antacid providing cooling relief from stomach ulcers.",
+        "price": "₹140",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Digene+Gel+Liquid+(Orange)",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Do not drink water immediately after taking the syrup to allow coating."
+    },
+    {
+        "name": "Spasmo-Proxyvon Plus Capsules",
+        "category": "Digestion & Antacids",
+        "description": "Used to treat severe abdominal spasm, colic pain, and stomach cramping.",
+        "price": "₹140",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Spasmo-Proxyvon+Plus+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Prescription drug. May cause extreme dry mouth and blurred vision."
+    },
+    {
+        "name": "Loperamide (Lomotil) Tablets",
+        "category": "Digestion & Antacids",
+        "description": "Anti-diarrheal tablet that slows down hyperactive bowel movements.",
+        "price": "₹25",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Loperamide+(Lomotil)+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not use if diarrhea is accompanied by fever or blood in stool."
+    },
+    {
+        "name": "Sporolac DS Tablets",
+        "category": "Digestion & Antacids",
+        "description": "Probiotic tablets containing lactic acid bacillus to restore healthy gut flora.",
+        "price": "₹90",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Sporolac+DS+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Excellent to take along with antibiotic treatments to prevent loose motions."
+    },
+    {
+        "name": "Yakult Probiotic Drink",
+        "category": "Digestion & Antacids",
+        "description": "Fermented milk drink containing Lactobacillus casei strain Shirota.",
+        "price": "₹80",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Yakult+Probiotic",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Keep refrigerated. Shake well before drinking."
+    },
+    {
+        "name": "Zinetac 150 Tablets",
+        "category": "Digestion & Antacids",
+        "description": "Standard acid blocker ranitidine used for long term relief of stomach burn.",
+        "price": "₹28",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Zinetac+150+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Consult a doctor if you experience sudden weight loss or trouble swallowing."
+    },
+    {
+        "name": "Himalaya Herbolax Tablets",
+        "category": "Digestion & Antacids",
+        "description": "Ayurvedic laxative tablet promoting smooth fecal transit and natural motions.",
+        "price": "₹110",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Himalaya+Herbolax",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "To be taken at night before sleeping."
+    },
+    {
+        "name": "Mucaine Gel Mint Syrup",
+        "category": "Digestion & Antacids",
+        "description": "Anesthetic antacid liquid containing Oxetacaine for immediate relief from ulcer pain.",
+        "price": "₹210",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Mucaine+Gel+Mint+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Avoid eating anything for 15 minutes after taking to prevent local anesthesia."
+    },
+    {
+        "name": "Carmozyme Liquid",
+        "category": "Digestion & Antacids",
+        "description": "Digestive enzymes syrup with carminative oils to treat loss of appetite.",
+        "price": "₹130",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Carmozyme+Liquid",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Take 1-2 teaspoons immediately after lunch and dinner."
+    },
+    {
+        "name": "Aristozyme Liquid Syrup",
+        "category": "Digestion & Antacids",
+        "description": "Diastase and Pepsin enzymes syrup used for relief from chronic indigestion.",
+        "price": "₹125",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Aristozyme+Liquid+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Consult your doctor if you are pregnant or breastfeeding."
+    },
+    {
+        "name": "Digeraft Oral Suspension",
+        "category": "Digestion & Antacids",
+        "description": "Sodium alginate and bicarbonate suspension to stop severe acid reflux.",
+        "price": "₹180",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Digeraft+Oral+Suspension",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Avoid heavy physical work immediately after taking."
+    },
+    {
+        "name": "Benadryl DR Cough Syrup",
+        "category": "Cough & Cold",
+        "description": "Fast-acting relief from dry cough, throat irritation, and sneezing.",
+        "price": "₹125",
+        "platform": "Flipkart",
+        "purchaseUrl": "https://www.flipkart.com/search?q=Benadryl+Cough+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "May cause drowsiness. Do not drive or operate machinery after use."
+    },
+    {
+        "name": "Strepsils Ginger Lozenges",
+        "category": "Cough & Cold",
+        "description": "Sore throat lozenges that provide quick relief from throat irritation and cough.",
+        "price": "₹35",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Strepsils+Ginger+Lozenges",
+        "imageResName": "med_lozenges_pack",
+        "safetyTip": "Slowly dissolve in mouth. Do not chew or swallow whole."
+    },
+    {
+        "name": "Alerid Cetirizine Tablets",
+        "category": "Cough & Cold",
+        "description": "Anti-allergic medicine for relief from runny nose, sneezing, and watery eyes.",
+        "price": "₹18",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Alerid+Cetirizine+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Typically taken at bedtime as it can make you feel sleepy."
+    },
+    {
+        "name": "Vicks Vaporub",
+        "category": "Cough & Cold",
+        "description": "Ayurvedic ointment providing relief from cold symptoms, cough, and body ache.",
+        "price": "₹95",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Vicks+Vaporub",
+        "imageResName": "med_vaporub_jar",
+        "safetyTip": "Apply to chest, throat, and back. Do not ingest or apply in nostrils."
+    },
+    {
+        "name": "Vicks Inhaler Keychain",
+        "category": "Cough & Cold",
+        "description": "Convenient nasal stick inhaler providing instant relief from blocked nose.",
+        "price": "₹55",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Vicks+Inhaler",
+        "imageResName": "med_vaporub_jar",
+        "safetyTip": "Inhale deeply. Do not share inhalers to prevent spread of cold."
+    },
+    {
+        "name": "Otrivin Nasal Spray",
+        "category": "Cough & Cold",
+        "description": "Provides relief from nasal congestion due to cold, sinus, and allergies.",
+        "price": "₹95",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Otrivin+Nasal+Spray",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Do not use for more than 5 consecutive days to avoid rebound congestion."
+    },
+    {
+        "name": "Ascoril LS Syrup",
+        "category": "Cough & Cold",
+        "description": "Mucolytic and bronchodilator syrup for relief from wet cough and chest congestion.",
+        "price": "₹140",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Ascoril+LS+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Take with warm water. Shake the bottle well before drinking."
+    },
+    {
+        "name": "Grilinctus Cough Syrup",
+        "category": "Cough & Cold",
+        "description": "Popular combination syrup used for soothing both dry and productive coughs.",
+        "price": "₹130",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Grilinctus+Cough+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Avoid taking if suffering from high blood pressure or heart rhythm disorders."
+    },
+    {
+        "name": "Solvin Cold Tablets",
+        "category": "Cough & Cold",
+        "description": "Combines Paracetamol, Phenylephrine & Chlorpheniramine for severe cold and runny nose.",
+        "price": "₹60",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Solvin+Cold+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "May cause dry mouth. Take plenty of fluids."
+    },
+    {
+        "name": "Allegra 120 Tablets",
+        "category": "Cough & Cold",
+        "description": "Fexofenadine non-drowsy anti-allergic tablets for seasonal allergies and hay fever.",
+        "price": "₹210",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Allegra+120+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not consume with fruit juices (like apple, orange, or grapefruit)."
+    },
+    {
+        "name": "Avil 25 Tablets",
+        "category": "Cough & Cold",
+        "description": "Pheniramine maleate anti-allergy tablet for severe itching, hives, and food allergy.",
+        "price": "₹12",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Avil+25+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Avoid alcohol as it will significantly increase the sleepiness effect."
+    },
+    {
+        "name": "Alex Cough Lozenges",
+        "category": "Cough & Cold",
+        "description": "Cough drops containing dextromethorphan for relief from irritating dry coughs.",
+        "price": "₹30",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Alex+Cough+Lozenges",
+        "imageResName": "med_lozenges_pack",
+        "safetyTip": "Consult your doctor if dry cough lasts more than 7 days."
+    },
+    {
+        "name": "Cofシル (Cofsil) Lozenges",
+        "category": "Cough & Cold",
+        "description": "Antibacterial throat lozenges that kill germs in the mouth and soothe raw throat.",
+        "price": "₹25",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Cofsil+Lozenges",
+        "imageResName": "med_lozenges_pack",
+        "safetyTip": "Keep out of reach of young children under 6 years."
+    },
+    {
+        "name": "Himalaya Koflet Syrup",
+        "category": "Cough & Cold",
+        "description": "Ayurvedic honey-based cough syrup for both productive and dry coughs.",
+        "price": "₹110",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Himalaya+Koflet+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Generally safe. Check for allergy to herbal components like Tulsi."
+    },
+    {
+        "name": "Honitus Cough Syrup",
+        "category": "Cough & Cold",
+        "description": "Dabur Honitus herbal syrup that provides quick relief without causing drowsiness.",
+        "price": "₹95",
+        "platform": "Flipkart",
+        "purchaseUrl": "https://www.flipkart.com/search?q=Honitus+Cough+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Take 1-2 teaspoons 3 to 4 times a day."
+    },
+    {
+        "name": "Vicks Cough Drops (Menthol)",
+        "category": "Cough & Cold",
+        "description": "Soothing menthol drops for quick temporary relief of throat tickle and minor irritations.",
+        "price": "₹20",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Vicks+Cough+Drops",
+        "imageResName": "med_lozenges_pack",
+        "safetyTip": "Can be taken as needed, but do not chew."
+    },
+    {
+        "name": "Karvol Plus Inhalant Capsules",
+        "category": "Cough & Cold",
+        "description": "Decongestant softgel capsule containing aromatic oils to cut through nasal block.",
+        "price": "₹90",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Karvol+Plus+Inhalant+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "For inhalation only. Snip tip and squeeze onto handkerchief or hot water. Do not swallow."
+    },
+    {
+        "name": "Sinarest Tablets",
+        "category": "Cough & Cold",
+        "description": "Multi-symptom cold relief tablet containing paracetamol and decongestants.",
+        "price": "₹62",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Sinarest+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "May cause dry nose. Avoid taking right before sleep."
+    },
+    {
+        "name": "Wikoryl Tablets",
+        "category": "Cough & Cold",
+        "description": "Excellent formulation for relieving allergic nasal runny discharges and fever.",
+        "price": "₹55",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Wikoryl+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not use if you are suffering from glaucoma."
+    },
+    {
+        "name": "Montair-LC Tablets",
+        "category": "Cough & Cold",
+        "description": "Combines Montelukast & Levocetirizine for asthma control and severe chronic allergy.",
+        "price": "₹320",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Montair-LC+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Best taken in the evening. May cause headache or mild sleepiness."
+    },
+    {
+        "name": "Breathe Easy Inhaler",
+        "category": "Cough & Cold",
+        "description": "Menthol and eucalyptus oil nasal stick to clear blocked sinuses immediately.",
+        "price": "₹45",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Breathe+Easy+Inhaler",
+        "imageResName": "med_vaporub_jar",
+        "safetyTip": "Avoid contact with eyes. Keep tightly closed when not in use."
+    },
+    {
+        "name": "Cetrizine Alerid Drops",
+        "category": "Cough & Cold",
+        "description": "Pediatric cetirizine drop for allergic runny nose in infants.",
+        "price": "₹50",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Cetrizine+Alerid+Drops",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Use exact dosage recommended by pediatrician using a measured dropper."
+    },
+    {
+        "name": "Torex Cough Syrup",
+        "category": "Cough & Cold",
+        "description": "Herbal dynamic cough formulation designed with Tulsi, Honey, and Banapsha.",
+        "price": "₹120",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Torex+Cough+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Safe for kids above 5. Restrict sugary snacks while taking to prevent throat itch."
+    },
+    {
+        "name": "Solvin Cold Syrup",
+        "category": "Cough & Cold",
+        "description": "Liquid formulation for kids with cold, fever, and watery eyes.",
+        "price": "₹80",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Solvin+Cold+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Consult pediatrician before administering. May cause slight hyperactiveness."
+    },
+    {
+        "name": "Alex Dry Cough Syrup",
+        "category": "Cough & Cold",
+        "description": "Dextromethorphan based cough suppressant syrup for strong non-productive coughs.",
+        "price": "₹145",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Alex+Dry+Cough+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Avoid taking if suffering from chronic bronchitis or asthma."
+    },
+    {
+        "name": "Kofol Lozenges (Orange)",
+        "category": "Cough & Cold",
+        "description": "Charak Kofol ayurvedic lozenges providing burning throat relief.",
+        "price": "₹40",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Kofol+Lozenges",
+        "imageResName": "med_lozenges_pack",
+        "safetyTip": "Slowly dissolve in mouth, do not chew."
+    },
+    {
+        "name": "Solvin Cough Lozenges",
+        "category": "Cough & Cold",
+        "description": "Menthol throat drops for relieving sore larynx.",
+        "price": "₹32",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Solvin+Cough+Lozenges",
+        "imageResName": "med_lozenges_pack",
+        "safetyTip": "Dissolve in mouth as needed."
+    },
+    {
+        "name": "Nasoclear Saline Nasal Drops",
+        "category": "Cough & Cold",
+        "description": "Pure saline drop used to moisten dry nasal passages and clear mucus in babies.",
+        "price": "₹55",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Nasoclear+Saline+Nasal+Drops",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Safe for repeated daily use. Throw away 30 days after opening."
+    },
+    {
+        "name": "Sualin Herbal Tablets",
+        "category": "Cough & Cold",
+        "description": "Hamdard Sualin tablets for cold, throat irritation, and breathing relief.",
+        "price": "₹60",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Hamdard+Sualin",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Can chew or suck 1-2 tablets as needed."
+    },
+    {
+        "name": "Avil 50 Tablets",
+        "category": "Cough & Cold",
+        "description": "High-strength pheniramine tablet for severe allergy and insect sting reactions.",
+        "price": "₹22",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Avil+50+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Prescription required. High sedative effect. Do not work on high heights."
+    },
+    {
+        "name": "Supradyn Daily Multivitamin",
+        "category": "Vitamins & Supplements",
+        "description": "Essential multivitamins and minerals to boost daily energy and immune system.",
+        "price": "₹110",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Supradyn+Daily+Multivitamin",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Consume one tablet daily after lunch or breakfast. Do not take on empty stomach."
+    },
+    {
+        "name": "Revital H Capsules (Men)",
+        "category": "Vitamins & Supplements",
+        "description": "Daily health supplement with Ginseng, multivitamins, and minerals to stay active.",
+        "price": "₹310",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Revital+H+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Recommended to take with a glass of milk after a meal."
+    },
+    {
+        "name": "Revital H Woman Capsules",
+        "category": "Vitamins & Supplements",
+        "description": "Specially formulated for women with extra iron and calcium to combat fatigue.",
+        "price": "₹345",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Revital+H+Woman+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Take one capsule daily with water after breakfast."
+    },
+    {
+        "name": "Becosules Capsules",
+        "category": "Vitamins & Supplements",
+        "description": "Vitamin B-Complex with Vitamin C capsules for mouth ulcers and energy boost.",
+        "price": "₹52",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Becosules+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "May turn urine bright yellow, which is harmless excess riboflavin."
+    },
+    {
+        "name": "Zincovit Tablets",
+        "category": "Vitamins & Supplements",
+        "description": "Multivitamin, multimineral supplement with Grape Seed extract to improve immunity.",
+        "price": "₹110",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Zincovit+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Check expiration date. Do not double dose if you miss a day."
+    },
+    {
+        "name": "Evion 400 Capsules",
+        "category": "Vitamins & Supplements",
+        "description": "Vitamin E supplement for healthy skin, hair nourishment, and muscular health.",
+        "price": "₹35",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Evion+400+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Can be consumed or oil can be applied directly on hair and skin."
+    },
+    {
+        "name": "Limcee Vitamin C Chewable (Orange)",
+        "category": "Vitamins & Supplements",
+        "description": "Delicious orange chewable tablets containing 500mg Vitamin C for daily wellness.",
+        "price": "₹28",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Limcee+Vitamin+C+Chewable+(Orange)",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Do not swallow whole. Chew well before swallowing."
+    },
+    {
+        "name": "Shelcal 500 Calcium Tablets",
+        "category": "Vitamins & Supplements",
+        "description": "Calcium and Vitamin D3 supplement for bone, joint, and teeth strength.",
+        "price": "₹130",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Shelcal+500+Calcium+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Best taken with food for maximum calcium absorption."
+    },
+    {
+        "name": "Neurobion Forte Tablets",
+        "category": "Vitamins & Supplements",
+        "description": "Standard vitamin B1, B6, B12 tablet to support nerve health and reduce tingling.",
+        "price": "₹38",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Neurobion+Forte+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Ideal for diabetic patients to prevent diabetic neuropathy."
+    },
+    {
+        "name": "Himalaya Ashvagandha Tablets",
+        "category": "Vitamins & Supplements",
+        "description": "Pure herb extract Ashwagandha designed to relieve stress and boost stamina.",
+        "price": "₹165",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Himalaya+Ashwagandha",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Take 1 tablet twice a day with warm milk or water."
+    },
+    {
+        "name": "Himalaya Shatavari Tablets",
+        "category": "Vitamins & Supplements",
+        "description": "Herbal supplement promoting female hormonal balance and lactation.",
+        "price": "₹170",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Himalaya+Shatavari",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Best taken after consulting a gynecologist."
+    },
+    {
+        "name": "Celin 500 Vitamin C Tablets",
+        "category": "Vitamins & Supplements",
+        "description": "Standard vitamin C supplement used to boost immunity and fight common cold.",
+        "price": "₹35",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Celin+500+Vitamin+C+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not take more than 2000mg of Vitamin C daily to avoid diarrhea."
+    },
+    {
+        "name": "Calcirol Sachet Granules",
+        "category": "Vitamins & Supplements",
+        "description": "High-dose Vitamin D3 Cholecalciferol (60k IU) granules for bone density restoration.",
+        "price": "₹45",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Calcirol+Sachet+Granules",
+        "imageResName": "med_powder_sachet",
+        "safetyTip": "Take once a week dissolved in milk, or as directed by doctor."
+    },
+    {
+        "name": "Folvite 5mg Tablets",
+        "category": "Vitamins & Supplements",
+        "description": "Folic acid (Vitamin B9) tablet used to treat anemia and support pregnancy.",
+        "price": "₹75",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Folvite+5mg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Essential for expecting mothers to prevent birth defects."
+    },
+    {
+        "name": "Autrin Capsules",
+        "category": "Vitamins & Supplements",
+        "description": "High-potency iron, folic acid, and vitamin B12 supplement for treating blood loss.",
+        "price": "₹160",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Autrin+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "May cause black stools, which is normal and harmless due to iron content."
+    },
+    {
+        "name": "Orovit Active Capsules",
+        "category": "Vitamins & Supplements",
+        "description": "Premium multivitamin containing Coenzyme Q10 and antioxidants for elderly vigor.",
+        "price": "₹280",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Orovit+Active+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Swallow whole, do not crush. Take daily at the same time."
+    },
+    {
+        "name": "Himalaya Amalaki C capsules",
+        "category": "Vitamins & Supplements",
+        "description": "Rich source of natural Vitamin C and antioxidants from Amla.",
+        "price": "₹140",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Himalaya+Amalaki",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Take 1 capsule after meals."
+    },
+    {
+        "name": "Tayla D3 Capsules",
+        "category": "Vitamins & Supplements",
+        "description": "Vitamin D3 (60,000 IU) softgels to correct chronic vitamin deficiency.",
+        "price": "₹120",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Tayla+D3+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Strictly once a week. Do not consume daily."
+    },
+    {
+        "name": "Active Calcium with Vitamin D3",
+        "category": "Vitamins & Supplements",
+        "description": "Strengthens bones and helps prevent osteoporosis in menopausal women.",
+        "price": "₹210",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Calcium+D3+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Drink a full glass of water. Avoid taking iron supplements simultaneously."
+    },
+    {
+        "name": "Optineuron Injection / Tablets",
+        "category": "Vitamins & Supplements",
+        "description": "High concentration B-Complex vitamins for nerve repair.",
+        "price": "₹15",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Optineuron+Injection+/+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Take strictly under medical prescription. High dose."
+    },
+    {
+        "name": "B-Protin Nutrition Powder",
+        "category": "Vitamins & Supplements",
+        "description": "High quality daily protein beverage powder for convalescing elderly.",
+        "price": "₹380",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=B-Protin+Powder",
+        "imageResName": "med_powder_sachet",
+        "safetyTip": "Stir well in warm milk to avoid lumps. Store in air-tight jar."
+    },
+    {
+        "name": "Dexorange Syrup",
+        "category": "Vitamins & Supplements",
+        "description": "Highly popular hematinic syrup containing Iron, Folic Acid, and Vitamin B12.",
+        "price": "₹150",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Dexorange+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Ensure you measure with the cap. Can cause mild constipation."
+    },
+    {
+        "name": "Feronia-XT Tablets",
+        "category": "Vitamins & Supplements",
+        "description": "Ferrous ascorbate & folic acid tablets to rapidly restore red blood count.",
+        "price": "₹180",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Feronia-XT+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Avoid taking tea or coffee within 2 hours of taking iron."
+    },
+    {
+        "name": "Centrum Kids / Adult Multivitamin",
+        "category": "Vitamins & Supplements",
+        "description": "Imported high standard daily vitamin tablet containing all key micronutrients.",
+        "price": "₹990",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Centrum+Multivitamin",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Keep container tightly closed in a cool place."
+    },
+    {
+        "name": "Wellwoman Multivitamin",
+        "category": "Vitamins & Supplements",
+        "description": "Vitabiotics daily health formulation with Evening Primrose Oil for women.",
+        "price": "₹280",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Wellwoman+Multivitamin",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Recommended for daily use. Do not chew."
+    },
+    {
+        "name": "Cobadex CZS Tablets",
+        "category": "Vitamins & Supplements",
+        "description": "Therapeutic multivitamin with Chromium, Zinc, and Selenium for glucose control.",
+        "price": "₹95",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Cobadex+CZS+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Excellent supplementary tablet for Type-2 diabetic patients."
+    },
+    {
+        "name": "Himalaya Liv 52 Tablets",
+        "category": "Vitamins & Supplements",
+        "description": "Ayurvedic liver protector that improves appetite and digestion.",
+        "price": "₹140",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Liv+52+Tablets",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Take 2 tablets twice daily. Recommended under medical advice."
+    },
+    {
+        "name": "OsteoBi-Flex Glucosamine",
+        "category": "Vitamins & Supplements",
+        "description": "Joint health supplement to lubricate cartilage and reduce knee stiffness.",
+        "price": "₹1800",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Osteo+Bi-Flex",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Takes 4-6 weeks of daily usage to show visible joint comfort improvements."
+    },
+    {
+        "name": "Cranberry Extract capsules",
+        "category": "Vitamins & Supplements",
+        "description": "Provides antioxidants supporting bladder and urinary tract health.",
+        "price": "₹450",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Cranberry+Extract",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Drink plenty of water to help flush the urinary tract."
+    },
+    {
+        "name": "Coenzyme Q10 100mg",
+        "category": "Vitamins & Supplements",
+        "description": "Supports cellular energy production and heart muscle health in the elderly.",
+        "price": "₹650",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Coenzyme+Q10",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Best taken with a meal containing fats to enhance absorption."
+    },
+    {
+        "name": "Glycomet 500 Metformin",
+        "category": "Chronic Care",
+        "description": "Oral anti-diabetic medicine used to regulate blood sugar levels.",
+        "price": "₹24",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Glycomet+500+Metformin",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Prescription required. Take with food to reduce stomach upsets."
+    },
+    {
+        "name": "Glycomet GP 1 Tablets",
+        "category": "Chronic Care",
+        "description": "Combination of Glimepiride & Metformin for high blood glucose control.",
+        "price": "₹82",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Glycomet+GP+1+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Watch out for symptoms of low blood sugar (sweating, dizziness, shaking)."
+    },
+    {
+        "name": "Januvia 100mg Tablets",
+        "category": "Chronic Care",
+        "description": "Sitagliptin tablets used to improve insulin secretion in type-2 diabetes.",
+        "price": "₹380",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Januvia+100mg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Notify doctor immediately if you experience severe abdominal pain."
+    },
+    {
+        "name": "Telma 40 Tablets",
+        "category": "Chronic Care",
+        "description": "Telmisartan blood pressure lowering tablet that helps prevent stroke and heart attack.",
+        "price": "₹95",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Telma+40+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Prescription required. Monitor blood pressure and kidney parameters regularly."
+    },
+    {
+        "name": "Telma-AM Tablets",
+        "category": "Chronic Care",
+        "description": "Combines Telmisartan and Amlodipine for treating resistant hypertension.",
+        "price": "₹120",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Telma-AM+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Can cause swelling in feet or ankles. Tell your doctor if this occurs."
+    },
+    {
+        "name": "Amlopin 5mg Tablets",
+        "category": "Chronic Care",
+        "description": "Amlodipine calcium channel blocker to treat high blood pressure and chest pain.",
+        "price": "₹18",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Amlopin+5mg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Take at a fixed time daily. Rise slowly from sitting positions."
+    },
+    {
+        "name": "Atorva 10mg Tablets",
+        "category": "Chronic Care",
+        "description": "Atorvastatin cholesterol-lowering statin used to prevent plaque buildup in arteries.",
+        "price": "₹65",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Atorva+10mg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Prescription required. Inform doctor if you have unexplained muscle pain."
+    },
+    {
+        "name": "Rosuvas 10 Tablets",
+        "category": "Chronic Care",
+        "description": "Rosuvastatin tablets to treat high blood cholesterol and triglycerides.",
+        "price": "₹110",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Rosuvas+10+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Avoid eating grapefruit or grapefruit juice while taking statins."
+    },
+    {
+        "name": "Ecosprin-AV 75/10 Capsules",
+        "category": "Chronic Care",
+        "description": "Combines Aspirin (blood thinner) and Atorvastatin (cholesterol reducer).",
+        "price": "₹55",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Ecosprin-AV+75/10+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "High risk of bleeding. Inform surgeons/dentists you are on this medicine."
+    },
+    {
+        "name": "Clopilet 75 Tablets",
+        "category": "Chronic Care",
+        "description": "Clopidogrel anti-platelet blood thinner to prevent blood clots in bypass patients.",
+        "price": "₹110",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Clopilet+75+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not stop taking this medication without consulting your cardiologist."
+    },
+    {
+        "name": "Metolar XR 50 Tablets",
+        "category": "Chronic Care",
+        "description": "Metoprolol beta blocker used to treat angina, high BP, and irregular heart beats.",
+        "price": "₹140",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Metolar+XR+50+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not stop suddenly, as it can cause rebound severe chest pain."
+    },
+    {
+        "name": "Concor 5mg Tablets",
+        "category": "Chronic Care",
+        "description": "Bisoprolol tablets used for heart failure management and hypertension.",
+        "price": "₹90",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Concor+5mg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Check pulse rate daily. Do not take if resting pulse is below 55 bpm."
+    },
+    {
+        "name": "Lasix 40mg Tablets",
+        "category": "Chronic Care",
+        "description": "Furosemide diuretic tablet used to treat water retention and fluid overload in lungs.",
+        "price": "₹12",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Lasix+40mg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Makes you urinate frequently. Avoid taking late at night."
+    },
+    {
+        "name": "Aldactone 25 Tablets",
+        "category": "Chronic Care",
+        "description": "Spironolactone potassium-sparing diuretic used for heart failure and liver cirrhosis edema.",
+        "price": "₹38",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Aldactone+25+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "May cause high potassium levels. Limit bananas or coconut water consumption."
+    },
+    {
+        "name": "Galvus Met 50/500 Tablets",
+        "category": "Chronic Care",
+        "description": "Vildagliptin and Metformin combination for excellent blood sugar regulation.",
+        "price": "₹280",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Galvus+Met+50/500+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Have regular liver function tests as vildagliptin can affect liver enzymes."
+    },
+    {
+        "name": "Jardiance 10mg Tablets",
+        "category": "Chronic Care",
+        "description": "Empagliflozin tablets that help kidneys filter out excess sugar via urine.",
+        "price": "₹450",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Jardiance+10mg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Drink plenty of water to prevent urinary tract infections."
+    },
+    {
+        "name": "Cardace 5mg Tablets",
+        "category": "Chronic Care",
+        "description": "Ramipril ACE inhibitor to treat heart failure and prevent vascular stroke.",
+        "price": "₹82",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Cardace+5mg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "May cause a dry cough. Inform your physician if the cough becomes bothersome."
+    },
+    {
+        "name": "Envas 5mg Tablets",
+        "category": "Chronic Care",
+        "description": "Enalapril tablets used to lower elevated blood pressure in chronic renal patients.",
+        "price": "₹30",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Envas+5mg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "First dose might cause lightheadedness, take at bedtime."
+    },
+    {
+        "name": "Thyronorm 100mcg Tablets",
+        "category": "Chronic Care",
+        "description": "Levothyroxine tablets for treating underactive thyroid glands (hypothyroidism).",
+        "price": "₹140",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Thyronorm+100mcg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Take first thing in the morning with a full glass of water, on an empty stomach."
+    },
+    {
+        "name": "Crestor 10mg Tablets",
+        "category": "Chronic Care",
+        "description": "Original premium Rosuvastatin statin for advanced cholesterol blockade.",
+        "price": "₹340",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Crestor+10mg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not consume if you have active liver disease."
+    },
+    {
+        "name": "Minipress XL 5 Tablets",
+        "category": "Chronic Care",
+        "description": "Prazosin alpha-blocker used to treat high BP and difficulty urinating in enlarged prostate.",
+        "price": "₹210",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Minipress+XL+5+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "May cause sudden fainting when standing up from lying position. Take care."
+    },
+    {
+        "name": "Humalog insulin injection",
+        "category": "Chronic Care",
+        "description": "Fast-acting insulin analogue used to control post-meal blood sugar levels.",
+        "price": "₹650",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Humalog+insulin+injection",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Keep stored in a refrigerator. Do not freeze."
+    },
+    {
+        "name": "Lantus Solostar Insulin Pen",
+        "category": "Chronic Care",
+        "description": "Long-acting basal insulin providing 24-hour baseline blood glucose control.",
+        "price": "₹1200",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Lantus+Solostar+Insulin+Pen",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Rotate injection sites regularly on thighs/abdomen to avoid fat buildup."
+    },
+    {
+        "name": "Lipitor 20mg Tablets",
+        "category": "Chronic Care",
+        "description": "Brand Atorvastatin tablets for premium cardiovascular protection.",
+        "price": "₹450",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Atorvastatin+Lipitor",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Take at night for maximum effectiveness."
+    },
+    {
+        "name": "Glyxambi Tablets",
+        "category": "Chronic Care",
+        "description": "Combines Empagliflozin and Linagliptin for next-gen dual action diabetic care.",
+        "price": "₹990",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Glyxambi+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Requires regular renal clearance tests."
+    },
+    {
+        "name": "Targit 40 Tablets",
+        "category": "Chronic Care",
+        "description": "Telmisartan formulation to manage chronic high blood pressure.",
+        "price": "₹80",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Targit+40+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not take during pregnancy."
+    },
+    {
+        "name": "Zyloric 100 Tablets",
+        "category": "Chronic Care",
+        "description": "Allopurinol tablet used to reduce blood uric acid levels and prevent gout attacks.",
+        "price": "₹28",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Zyloric+100+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Drink plenty of water to prevent formation of kidney stones."
+    },
+    {
+        "name": "Arkamin Tablets",
+        "category": "Chronic Care",
+        "description": "Clonidine tablet used for rapid reduction of acute emergency blood pressure spikes.",
+        "price": "₹42",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Arkamin+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "May cause severe dry mouth and deep sleep."
+    },
+    {
+        "name": "Eltroxin 50mcg Tablets",
+        "category": "Chronic Care",
+        "description": "Thyroid hormone replacement tablet for correcting low metabolism.",
+        "price": "₹120",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Eltroxin+50mcg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Requires monthly blood tests to calibrate the exact dosage."
+    },
+    {
+        "name": "Metocard XL 25 Tablets",
+        "category": "Chronic Care",
+        "description": "Beta blocker to slow down fast heart rates and lower blood pressure.",
+        "price": "₹60",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Metocard+XL+25+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Avoid taking with high-fat meals."
+    },
+    {
+        "name": "Nicip Plus Tablets",
+        "category": "Pain Relief",
+        "description": "Nimesulide + Paracetamol pain blocker.",
+        "price": "₹55",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Nicip+Plus+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not consume on an empty stomach. Take with milk or water."
+    },
+    {
+        "name": "Gelusil MPS Liquid (Cardamom)",
+        "category": "Digestion & Antacids",
+        "description": "Tasty antacid syrup for heartburn.",
+        "price": "₹120",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Gelusil+MPS+Liquid+(Cardamom)",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Chew or dissolve properly before swallowing. Restrict carbonated drinks."
+    },
+    {
+        "name": "Tus-Q Cough Syrup",
+        "category": "Cough & Cold",
+        "description": "Expectorant for treating thick coughs.",
+        "price": "₹95",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Tus-Q+Cough+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Can cause drowsiness. Avoid driving or night shifts."
+    },
+    {
+        "name": "Limcee Chewable (Lemon)",
+        "category": "Vitamins & Supplements",
+        "description": "Vitamin C chewable tablets.",
+        "price": "₹28",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Limcee+Chewable+(Lemon)",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Take after a full meal. Do not exceed the daily dose."
+    },
+    {
+        "name": "Dettol Antiseptic Liquid 250ml",
+        "category": "First Aid & Skin",
+        "description": "Antiseptic first aid liquid.",
+        "price": "₹110",
+        "platform": "Flipkart",
+        "purchaseUrl": "https://www.flipkart.com/search?q=Dettol+Antiseptic+Liquid+250ml",
+        "imageResName": "med_ointment_tube",
+        "safetyTip": "For external use only. Discontinue if red rash develops."
+    },
+    {
+        "name": "Telma 20 Tablets",
+        "category": "Chronic Care",
+        "description": "Lower strength Telmisartan.",
+        "price": "₹50",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Telma+20+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Prescription required. Regularly monitor physiological readings."
+    },
+    {
+        "name": "Sirdalud 2mg Tablets",
+        "category": "Pain Relief",
+        "description": "Muscle relaxant for spasms.",
+        "price": "₹120",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Sirdalud+2mg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not consume on an empty stomach. Take with milk or water."
+    },
+    {
+        "name": "Aciloc RD Capsules",
+        "category": "Digestion & Antacids",
+        "description": "Omeprazole + Ranitidine combo.",
+        "price": "₹65",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Aciloc+RD+Capsules",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Chew or dissolve properly before swallowing. Restrict carbonated drinks."
+    },
+    {
+        "name": "Grilinctus-BM Syrup",
+        "category": "Cough & Cold",
+        "description": "Terbutaline and Bromhexine bronchodiator.",
+        "price": "₹115",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Grilinctus-BM+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Can cause drowsiness. Avoid driving or night shifts."
+    },
+    {
+        "name": "Becosules Z Capsules",
+        "category": "Vitamins & Supplements",
+        "description": "Vitamin B-complex with zinc.",
+        "price": "₹55",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Becosules+Z+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Take after a full meal. Do not exceed the daily dose."
+    },
+    {
+        "name": "Savlon Antiseptic Liquid",
+        "category": "First Aid & Skin",
+        "description": "No-sting antiseptic wash.",
+        "price": "₹85",
+        "platform": "Flipkart",
+        "purchaseUrl": "https://www.flipkart.com/search?q=Savlon+Antiseptic+Liquid",
+        "imageResName": "med_ointment_tube",
+        "safetyTip": "For external use only. Discontinue if red rash develops."
+    },
+    {
+        "name": "Telma 80 Tablets",
+        "category": "Chronic Care",
+        "description": "High strength blood pressure controller.",
+        "price": "₹160",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Telma+80+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Prescription required. Regularly monitor physiological readings."
+    },
+    {
+        "name": "Myospas Tablets",
+        "category": "Pain Relief",
+        "description": "Relieves muscle spasms and neck stiffness.",
+        "price": "₹110",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Myospas+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not consume on an empty stomach. Take with milk or water."
+    },
+    {
+        "name": "Omez-D Capsules",
+        "category": "Digestion & Antacids",
+        "description": "Omeprazole with Domperidone.",
+        "price": "₹110",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Omez-D+Capsules",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Chew or dissolve properly before swallowing. Restrict carbonated drinks."
+    },
+    {
+        "name": "Ascoril D Plus Syrup",
+        "category": "Cough & Cold",
+        "description": "For severe irritating dry hacking coughs.",
+        "price": "₹130",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Ascoril+D+Plus+Syrup",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Can cause drowsiness. Avoid driving or night shifts."
+    },
+    {
+        "name": "Zincovit Syrup",
+        "category": "Vitamins & Supplements",
+        "description": "Immuno booster multivitamin syrup.",
+        "price": "₹120",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Zincovit+Syrup",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Take after a full meal. Do not exceed the daily dose."
+    },
+    {
+        "name": "Betadine 10% Ointment",
+        "category": "First Aid & Skin",
+        "description": "Povidone-iodine burn and cut cream.",
+        "price": "₹115",
+        "platform": "Flipkart",
+        "purchaseUrl": "https://www.flipkart.com/search?q=Betadine+10%+Ointment",
+        "imageResName": "med_ointment_tube",
+        "safetyTip": "For external use only. Discontinue if red rash develops."
+    },
+    {
+        "name": "Telma-H Tablets",
+        "category": "Chronic Care",
+        "description": "Telmisartan + Hydrochlorothiazide diuretic.",
+        "price": "₹130",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Telma-H+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Prescription required. Regularly monitor physiological readings."
+    },
+    {
+        "name": "Overan Gel",
+        "category": "Pain Relief",
+        "description": "Diclofenac deep action cooling gel.",
+        "price": "₹95",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Overan+Gel",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not consume on an empty stomach. Take with milk or water."
+    },
+    {
+        "name": "Digene Gel Mint Syrup",
+        "category": "Digestion & Antacids",
+        "description": "Minty coating gel for stomach ulcers.",
+        "price": "₹140",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Digene+Gel+Mint+Syrup",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Chew or dissolve properly before swallowing. Restrict carbonated drinks."
+    },
+    {
+        "name": "Koflet Lozenges (Lemon)",
+        "category": "Cough & Cold",
+        "description": "Herbal lozenges for throat clearing.",
+        "price": "₹35",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Koflet+Lozenges+(Lemon)",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Can cause drowsiness. Avoid driving or night shifts."
+    },
+    {
+        "name": "Evion 600 Capsules",
+        "category": "Vitamins & Supplements",
+        "description": "Higher strength Vitamin E supplement.",
+        "price": "₹50",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Evion+600+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Take after a full meal. Do not exceed the daily dose."
+    },
+    {
+        "name": "Betadine Gargle Solution",
+        "category": "First Aid & Skin",
+        "description": "Gargling fluid for severe mouth ulcers.",
+        "price": "₹160",
+        "platform": "Flipkart",
+        "purchaseUrl": "https://www.flipkart.com/search?q=Betadine+Gargle+Solution",
+        "imageResName": "med_ointment_tube",
+        "safetyTip": "For external use only. Discontinue if red rash develops."
+    },
+    {
+        "name": "Amlokind 5 Tablets",
+        "category": "Chronic Care",
+        "description": "BP lowering Amlodipine tablet.",
+        "price": "₹15",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Amlokind+5+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Prescription required. Regularly monitor physiological readings."
+    },
+    {
+        "name": "Zerodol-MR Tablets",
+        "category": "Pain Relief",
+        "description": "Aceclofenac + Tizanidine compound.",
+        "price": "₹130",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Zerodol-MR+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not consume on an empty stomach. Take with milk or water."
+    },
+    {
+        "name": "Eno Fruit Salt (Orange)",
+        "category": "Digestion & Antacids",
+        "description": "Fast relief effervescent orange flavor powder.",
+        "price": "₹60",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Eno+Fruit+Salt+(Orange)",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Chew or dissolve properly before swallowing. Restrict carbonated drinks."
+    },
+    {
+        "name": "Strepsils Honey Lozenges",
+        "category": "Cough & Cold",
+        "description": "Soothing honey and lemon drops.",
+        "price": "₹35",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Strepsils+Honey+Lozenges",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Can cause drowsiness. Avoid driving or night shifts."
+    },
+    {
+        "name": "Calcirol 60K Capsules",
+        "category": "Vitamins & Supplements",
+        "description": "Vitamin D3 soft gelatin capsules.",
+        "price": "₹110",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Calcirol+60K+Capsules",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Take after a full meal. Do not exceed the daily dose."
+    },
+    {
+        "name": "Soframycin Skin Cream",
+        "category": "First Aid & Skin",
+        "description": "Antibacterial wound healing ointment.",
+        "price": "₹48",
+        "platform": "Flipkart",
+        "purchaseUrl": "https://www.flipkart.com/search?q=Soframycin+Skin+Cream",
+        "imageResName": "med_ointment_tube",
+        "safetyTip": "For external use only. Discontinue if red rash develops."
+    },
+    {
+        "name": "Amlokind-AT Tablets",
+        "category": "Chronic Care",
+        "description": "Amlodipine + Atenolol combo.",
+        "price": "₹45",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Amlokind-AT+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Prescription required. Regularly monitor physiological readings."
+    },
+    {
+        "name": "Imol Tablets",
+        "category": "Pain Relief",
+        "description": "Ibuprofen and Paracetamol suspension alternative.",
+        "price": "₹25",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Imol+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not consume on an empty stomach. Take with milk or water."
+    },
+    {
+        "name": "Eno Fruit Salt (Cola)",
+        "category": "Digestion & Antacids",
+        "description": "Cola flavored fizzy antacid.",
+        "price": "₹60",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Eno+Fruit+Salt+(Cola)",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Chew or dissolve properly before swallowing. Restrict carbonated drinks."
+    },
+    {
+        "name": "Strepsils Cool Lozenges",
+        "category": "Cough & Cold",
+        "description": "Menthol throat drops.",
+        "price": "₹35",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Strepsils+Cool+Lozenges",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Can cause drowsiness. Avoid driving or night shifts."
+    },
+    {
+        "name": "Shelcal XT Tablets",
+        "category": "Vitamins & Supplements",
+        "description": "Calcium + Vitamin D3 + L-Methylfolate.",
+        "price": "₹280",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Shelcal+XT+Tablets",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Take after a full meal. Do not exceed the daily dose."
+    },
+    {
+        "name": "Boroline Antiseptic Cream",
+        "category": "First Aid & Skin",
+        "description": "Night repair skin cream for dry skin.",
+        "price": "₹45",
+        "platform": "Flipkart",
+        "purchaseUrl": "https://www.flipkart.com/search?q=Boroline+Antiseptic+Cream",
+        "imageResName": "med_ointment_tube",
+        "safetyTip": "For external use only. Discontinue if red rash develops."
+    },
+    {
+        "name": "Atorva 20mg Tablets",
+        "category": "Chronic Care",
+        "description": "Medium strength statin for cholesterol.",
+        "price": "₹120",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Atorva+20mg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Prescription required. Regularly monitor physiological readings."
+    },
+    {
+        "name": "Ultracet Semi",
+        "category": "Pain Relief",
+        "description": "Low dose tramadol for post-operative recovery.",
+        "price": "₹140",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Ultracet+Semi",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not consume on an empty stomach. Take with milk or water."
+    },
+    {
+        "name": "Zandu Pancharishta Liquid",
+        "category": "Digestion & Antacids",
+        "description": "Digestive tonic for building digestive immunity.",
+        "price": "₹210",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Zandu+Pancharishta+Liquid",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Chew or dissolve properly before swallowing. Restrict carbonated drinks."
+    },
+    {
+        "name": "Cetrizine 10mg Tablets",
+        "category": "Cough & Cold",
+        "description": "Generic anti-allergy tablets.",
+        "price": "₹10",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Cetrizine+10mg+Tablets",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Can cause drowsiness. Avoid driving or night shifts."
+    },
+    {
+        "name": "Neurobion Plus Tablets",
+        "category": "Vitamins & Supplements",
+        "description": "Mecobalamin nerve strengthening supplement.",
+        "price": "₹95",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Neurobion+Plus+Tablets",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Take after a full meal. Do not exceed the daily dose."
+    },
+    {
+        "name": "BoroPlus Antiseptic Cream",
+        "category": "First Aid & Skin",
+        "description": "Moisturizing skin protection balm.",
+        "price": "₹40",
+        "platform": "Flipkart",
+        "purchaseUrl": "https://www.flipkart.com/search?q=BoroPlus+Antiseptic+Cream",
+        "imageResName": "med_ointment_tube",
+        "safetyTip": "For external use only. Discontinue if red rash develops."
+    },
+    {
+        "name": "Atorva 40mg Tablets",
+        "category": "Chronic Care",
+        "description": "High strength cholesterol blocker.",
+        "price": "₹210",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Atorva+40mg+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Prescription required. Regularly monitor physiological readings."
+    },
+    {
+        "name": "Dart Headache Relief",
+        "category": "Pain Relief",
+        "description": "Quick action caffeine tablet.",
+        "price": "₹30",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Dart+Headache+Relief",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not consume on an empty stomach. Take with milk or water."
+    },
+    {
+        "name": "Lactulose Solution Syrup",
+        "category": "Digestion & Antacids",
+        "description": "Osmotic laxative for geriatric patients.",
+        "price": "₹240",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Lactulose+Solution+Syrup",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Chew or dissolve properly before swallowing. Restrict carbonated drinks."
+    },
+    {
+        "name": "Allegra M Tablets",
+        "category": "Cough & Cold",
+        "description": "Fexofenadine + Montelukast combo.",
+        "price": "₹260",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Allegra+M+Tablets",
+        "imageResName": "med_syrup_bottle",
+        "safetyTip": "Can cause drowsiness. Avoid driving or night shifts."
+    },
+    {
+        "name": "Himalaya Gokshura Tablets",
+        "category": "Vitamins & Supplements",
+        "description": "Stamina and energy enhancer.",
+        "price": "₹180",
+        "platform": "Amazon India",
+        "purchaseUrl": "https://www.amazon.in/s?k=Himalaya+Gokshura+Tablets",
+        "imageResName": "med_capsule_bottle",
+        "safetyTip": "Take after a full meal. Do not exceed the daily dose."
+    },
+    {
+        "name": "Neosporin Ointment",
+        "category": "First Aid & Skin",
+        "description": "Triple antibiotic wound care gel.",
+        "price": "₹90",
+        "platform": "Flipkart",
+        "purchaseUrl": "https://www.flipkart.com/search?q=Neosporin+Ointment",
+        "imageResName": "med_ointment_tube",
+        "safetyTip": "For external use only. Discontinue if red rash develops."
+    },
+    {
+        "name": "Rosuvas 5 Tablets",
+        "category": "Chronic Care",
+        "description": "Mild Rosuvastatin cholesterol pill.",
+        "price": "₹65",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Rosuvas+5+Tablets",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Prescription required. Regularly monitor physiological readings."
+    },
+    {
+        "name": "Sloane's Liniment",
+        "category": "Pain Relief",
+        "description": "Warming muscle rub oil.",
+        "price": "₹80",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Sloane's+Liniment",
+        "imageResName": "med_tablet_strip",
+        "safetyTip": "Do not consume on an empty stomach. Take with milk or water."
+    },
+    {
+        "name": "Dulcolax Bisacodyl Tablets",
+        "category": "Digestion & Antacids",
+        "description": "Overnight constipation relief tablets.",
+        "price": "₹12",
+        "platform": "Tata 1mg",
+        "purchaseUrl": "https://www.1mg.com/search/all?name=Dulcolax+Bisacodyl+Tablets",
+        "imageResName": "med_antacid_box",
+        "safetyTip": "Chew or dissolve properly before swallowing. Restrict carbonated drinks."
+    }
+]

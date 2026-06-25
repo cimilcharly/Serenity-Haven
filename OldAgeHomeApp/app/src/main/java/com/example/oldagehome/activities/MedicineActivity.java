@@ -145,17 +145,138 @@ public class MedicineActivity extends AppCompatActivity {
         View dialogView = inflater.inflate(R.layout.dialog_add_medicine, null);
         builder.setView(dialogView);
 
-        EditText etMedicineName = dialogView.findViewById(R.id.etMedicineName);
-        EditText etDosage = dialogView.findViewById(R.id.etDosage);
-        EditText etQuantity = dialogView.findViewById(R.id.etQuantity);
+        TextView tvDialogTitle = dialogView.findViewById(R.id.tvDialogTitle);
+        android.widget.AutoCompleteTextView etMedicineName = dialogView.findViewById(R.id.etMedicineName);
+        com.google.android.material.textfield.TextInputEditText etDosageValue = dialogView.findViewById(R.id.etDosageValue);
+        com.google.android.material.chip.ChipGroup chipGroupUnit = dialogView.findViewById(R.id.chipGroupUnit);
+        com.google.android.material.textfield.TextInputEditText etQuantity = dialogView.findViewById(R.id.etQuantity);
         LinearLayout timeSlotsContainer = dialogView.findViewById(R.id.timeSlotsContainer);
         Button btnAddTime = dialogView.findViewById(R.id.btnAddTime);
+        Button btnCancel = dialogView.findViewById(R.id.btnCancel);
+        Button btnSave = dialogView.findViewById(R.id.btnSave);
+
+        android.widget.ImageButton btnDosageUp = dialogView.findViewById(R.id.btnDosageUp);
+        android.widget.ImageButton btnDosageDown = dialogView.findViewById(R.id.btnDosageDown);
+        android.widget.ImageButton btnQtyUp = dialogView.findViewById(R.id.btnQtyUp);
+        android.widget.ImageButton btnQtyDown = dialogView.findViewById(R.id.btnQtyDown);
+
+        btnDosageUp.setOnClickListener(v -> {
+            String valStr = etDosageValue.getText().toString().trim();
+            double val = 0.0;
+            if (!valStr.isEmpty()) {
+                try {
+                    val = Double.parseDouble(valStr);
+                } catch (NumberFormatException ignored) {}
+            }
+            int checkedChipId = chipGroupUnit.getCheckedChipId();
+            double increment = 1.0;
+            if (checkedChipId == R.id.chipMg) {
+                increment = 50.0;
+            } else if (checkedChipId == R.id.chipMl) {
+                increment = 5.0;
+            }
+            val += increment;
+            if (val == (long) val) {
+                etDosageValue.setText(String.valueOf((long) val));
+            } else {
+                etDosageValue.setText(String.valueOf(val));
+            }
+        });
+
+        btnDosageDown.setOnClickListener(v -> {
+            String valStr = etDosageValue.getText().toString().trim();
+            double val = 0.0;
+            if (!valStr.isEmpty()) {
+                try {
+                    val = Double.parseDouble(valStr);
+                } catch (NumberFormatException ignored) {}
+            }
+            int checkedChipId = chipGroupUnit.getCheckedChipId();
+            double decrement = 1.0;
+            if (checkedChipId == R.id.chipMg) {
+                decrement = 50.0;
+            } else if (checkedChipId == R.id.chipMl) {
+                decrement = 5.0;
+            }
+            val -= decrement;
+            if (val < 0) val = 0.0;
+            if (val == (long) val) {
+                etDosageValue.setText(String.valueOf((long) val));
+            } else {
+                etDosageValue.setText(String.valueOf(val));
+            }
+        });
+
+        btnQtyUp.setOnClickListener(v -> {
+            String qtyStr = etQuantity.getText().toString().trim();
+            int qty = 0;
+            if (!qtyStr.isEmpty()) {
+                try {
+                    qty = Integer.parseInt(qtyStr);
+                } catch (NumberFormatException ignored) {}
+            }
+            qty += 10;
+            etQuantity.setText(String.valueOf(qty));
+        });
+
+        btnQtyDown.setOnClickListener(v -> {
+            String qtyStr = etQuantity.getText().toString().trim();
+            int qty = 0;
+            if (!qtyStr.isEmpty()) {
+                try {
+                    qty = Integer.parseInt(qtyStr);
+                } catch (NumberFormatException ignored) {}
+            }
+            qty -= 10;
+            if (qty < 0) qty = 0;
+            etQuantity.setText(String.valueOf(qty));
+        });
+
+        List<String> medicineSuggestions = getMedicineSuggestions();
+        android.widget.ArrayAdapter<String> suggestionAdapter = new android.widget.ArrayAdapter<>(
+                this, android.R.layout.simple_dropdown_item_1line, medicineSuggestions);
+        etMedicineName.setAdapter(suggestionAdapter);
+        etMedicineName.setThreshold(1);
 
         List<String> selectedTimes = new ArrayList<>();
 
         if (medicineToEdit != null) {
+            if (tvDialogTitle != null) {
+                tvDialogTitle.setText("Edit Medicine");
+            }
             etMedicineName.setText(medicineToEdit.getMedicineName());
-            etDosage.setText(medicineToEdit.getDosage());
+
+            // Parse dosage value and unit
+            String dosageStr = medicineToEdit.getDosage() != null ? medicineToEdit.getDosage().trim() : "";
+            String dosageValue = "";
+            String dosageUnit = "";
+            int lastSpaceIdx = dosageStr.lastIndexOf(' ');
+            if (lastSpaceIdx != -1) {
+                dosageValue = dosageStr.substring(0, lastSpaceIdx).trim();
+                dosageUnit = dosageStr.substring(lastSpaceIdx + 1).trim();
+            } else {
+                int i = 0;
+                while (i < dosageStr.length() && (Character.isDigit(dosageStr.charAt(i)) || dosageStr.charAt(i) == '.')) {
+                    i++;
+                }
+                dosageValue = dosageStr.substring(0, i).trim();
+                dosageUnit = dosageStr.substring(i).trim();
+            }
+
+            etDosageValue.setText(dosageValue);
+
+            if (dosageUnit.equalsIgnoreCase("ml")) {
+                chipGroupUnit.check(R.id.chipMl);
+            } else if (dosageUnit.equalsIgnoreCase("mg")) {
+                chipGroupUnit.check(R.id.chipMg);
+            } else if (dosageUnit.toLowerCase().contains("capsule")) {
+                chipGroupUnit.check(R.id.chipCapsule);
+            } else if (dosageUnit.toLowerCase().contains("tablet")) {
+                chipGroupUnit.check(R.id.chipTablet);
+            } else {
+                chipGroupUnit.check(R.id.chipTablet);
+            }
+
             etQuantity.setText(String.valueOf(medicineToEdit.getTotalQuantity()));
             if (medicineToEdit.getExactTimes() != null) {
                 for (String time : medicineToEdit.getExactTimes()) {
@@ -163,6 +284,8 @@ public class MedicineActivity extends AppCompatActivity {
                     addTimeView(timeSlotsContainer, time, selectedTimes);
                 }
             }
+        } else {
+            chipGroupUnit.check(R.id.chipTablet);
         }
 
         btnAddTime.setOnClickListener(v -> {
@@ -179,17 +302,63 @@ public class MedicineActivity extends AppCompatActivity {
             mTimePicker.show();
         });
 
-        builder.setPositiveButton("Save", (dialog, which) -> {
+        AlertDialog dialog = builder.create();
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(android.graphics.Color.TRANSPARENT));
+        }
+
+        btnCancel.setOnClickListener(v -> dialog.dismiss());
+
+        btnSave.setOnClickListener(v -> {
             String medicineName = etMedicineName.getText().toString().trim();
-            String dosage = etDosage.getText().toString().trim();
+            String val = etDosageValue.getText().toString().trim();
             String quantityStr = etQuantity.getText().toString().trim();
 
-            if (medicineName.isEmpty() || dosage.isEmpty() || quantityStr.isEmpty() || selectedTimes.isEmpty()) {
-                Toast.makeText(this, "Please fill all fields and add at least one time", Toast.LENGTH_SHORT).show();
+            int checkedChipId = chipGroupUnit.getCheckedChipId();
+            if (medicineName.isEmpty() || val.isEmpty() || quantityStr.isEmpty() || selectedTimes.isEmpty() || checkedChipId == View.NO_ID) {
+                Toast.makeText(this, "Please fill all fields, select a unit, and add at least one time", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            int totalQuantity = Integer.parseInt(quantityStr);
+            // Determine unit and plurals
+            String unit = "";
+            if (checkedChipId == R.id.chipMl) {
+                unit = "ml";
+            } else if (checkedChipId == R.id.chipMg) {
+                unit = "mg";
+            } else if (checkedChipId == R.id.chipCapsule) {
+                try {
+                    double parsedVal = Double.parseDouble(val);
+                    if (parsedVal == 1.0) {
+                        unit = "Capsule";
+                    } else {
+                        unit = "Capsules";
+                    }
+                } catch (NumberFormatException e) {
+                    unit = "Capsules";
+                }
+            } else if (checkedChipId == R.id.chipTablet) {
+                try {
+                    double parsedVal = Double.parseDouble(val);
+                    if (parsedVal == 1.0) {
+                        unit = "Tablet";
+                    } else {
+                        unit = "Tablets";
+                    }
+                } catch (NumberFormatException e) {
+                    unit = "Tablets";
+                }
+            }
+
+            String dosage = val + " " + unit;
+            int totalQuantity;
+            try {
+                totalQuantity = Integer.parseInt(quantityStr);
+            } catch (NumberFormatException e) {
+                Toast.makeText(this, "Invalid quantity", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             MedicineModel newMedicine = new MedicineModel(medicineName, dosage, selectedTimes, totalQuantity);
 
             if (medicineToEdit != null) {
@@ -202,7 +371,14 @@ public class MedicineActivity extends AppCompatActivity {
                                     .addOnSuccessListener(aVoid2 -> {
                                         scheduleMedicineNotification(newMedicine);
                                         Toast.makeText(this, "Medicine Updated", Toast.LENGTH_SHORT).show();
+                                        dialog.dismiss();
+                                    })
+                                    .addOnFailureListener(e -> {
+                                        Toast.makeText(this, "Failed to update medicine details", Toast.LENGTH_SHORT).show();
                                     });
+                        })
+                        .addOnFailureListener(e -> {
+                            Toast.makeText(this, "Failed to remove old medicine details", Toast.LENGTH_SHORT).show();
                         });
             } else {
                 db.collection("users").document(residentId)
@@ -210,14 +386,14 @@ public class MedicineActivity extends AppCompatActivity {
                         .addOnSuccessListener(aVoid -> {
                             scheduleMedicineNotification(newMedicine);
                             Toast.makeText(this, "Medicine Added successfully", Toast.LENGTH_SHORT).show();
+                            dialog.dismiss();
                         })
                         .addOnFailureListener(
                                 e -> Toast.makeText(this, "Failed to add medicine", Toast.LENGTH_SHORT).show());
             }
         });
 
-        builder.setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
-        builder.create().show();
+        dialog.show();
     }
 
     private void addTimeView(LinearLayout container, String time, List<String> selectedTimes) {
@@ -272,5 +448,42 @@ public class MedicineActivity extends AppCompatActivity {
         if (alarmManager != null) {
             alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
         }
+    }
+
+    private List<String> getMedicineSuggestions() {
+        List<String> suggestions = new ArrayList<>();
+        try {
+            java.io.InputStream is = getAssets().open("medicines.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            String json = new String(buffer, java.nio.charset.StandardCharsets.UTF_8);
+            org.json.JSONArray jsonArray = new org.json.JSONArray(json);
+            for (int i = 0; i < jsonArray.length(); i++) {
+                org.json.JSONObject obj = jsonArray.getJSONObject(i);
+                String name = obj.optString("name");
+                if (name != null && !name.isEmpty() && !suggestions.contains(name)) {
+                    suggestions.add(name);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        // Add a few fallback defaults if loading fails
+        if (suggestions.isEmpty()) {
+            suggestions.add("Paracetamol");
+            suggestions.add("Ibuprofen");
+            suggestions.add("Aspirin");
+            suggestions.add("Supradyn");
+            suggestions.add("Metformin");
+            suggestions.add("Atorvastatin");
+            suggestions.add("Pantocid");
+            suggestions.add("Volini");
+            suggestions.add("Benadryl");
+            suggestions.add("Limcee");
+        }
+        return suggestions;
     }
 }

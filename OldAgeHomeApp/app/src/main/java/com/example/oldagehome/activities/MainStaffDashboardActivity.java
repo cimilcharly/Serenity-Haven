@@ -31,6 +31,11 @@ public class MainStaffDashboardActivity extends AppCompatActivity {
     private FirebaseFirestore db;
     private String communityId = null;
     private String communityName = null;
+    private String userName = "";
+    private String userEmail = "";
+    private int userAge = 0;
+    private String joinCode = "";
+    private String profileImageUrl = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,17 +62,28 @@ public class MainStaffDashboardActivity extends AppCompatActivity {
         binding.rvSelfResidents.setLayoutManager(new LinearLayoutManager(this));
         binding.rvSelfResidents.setAdapter(selfAdapter);
 
+        // Load User Profile Picture if available (e.g. from Google Account)
+        com.google.firebase.auth.FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser != null && currentUser.getPhotoUrl() != null) {
+            com.bumptech.glide.Glide.with(this)
+                    .load(currentUser.getPhotoUrl())
+                    .placeholder(R.drawable.ic_avatar_placeholder)
+                    .error(R.drawable.ic_avatar_placeholder)
+                    .into(binding.ivProfileAvatar);
+        }
+
         binding.cardApprove.setOnClickListener(v -> {
             startActivity(new Intent(this, PendingApprovalsActivity.class));
         });
 
         binding.cardInvite.setOnClickListener(v -> showInviteDialog());
 
-        binding.tvLogout.setOnClickListener(v -> {
-            FirebaseAuth.getInstance().signOut();
-            Intent intent = new Intent(this, LoginActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
+        binding.ivCart.setOnClickListener(v -> {
+            startActivity(new Intent(this, MedicineStoreActivity.class));
+        });
+
+        binding.cardProfile.setOnClickListener(v -> {
+            showUserProfileDialog();
         });
 
         binding.fabAddResident.setOnClickListener(v -> {
@@ -112,6 +128,24 @@ public class MainStaffDashboardActivity extends AppCompatActivity {
         db.collection("users").document(uid).get()
                 .addOnSuccessListener(documentSnapshot -> {
                     if (documentSnapshot.exists()) {
+                        userName = documentSnapshot.getString("name");
+                        if (userName == null) userName = "";
+                        userEmail = documentSnapshot.getString("email");
+                        if (userEmail == null) userEmail = "";
+                        Long ageLong = documentSnapshot.getLong("age");
+                        userAge = ageLong != null ? ageLong.intValue() : 0;
+                        profileImageUrl = documentSnapshot.getString("profileImageUrl");
+                        if (profileImageUrl == null) profileImageUrl = "";
+
+                        // Update toolbar avatar
+                        com.google.firebase.auth.FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+                        String avatarUrl = (!profileImageUrl.isEmpty()) ? profileImageUrl : (currentUser != null && currentUser.getPhotoUrl() != null ? currentUser.getPhotoUrl().toString() : null);
+                        com.bumptech.glide.Glide.with(MainStaffDashboardActivity.this)
+                                .load(avatarUrl)
+                                .placeholder(R.drawable.ic_avatar_placeholder)
+                                .error(R.drawable.ic_avatar_placeholder)
+                                .into(binding.ivProfileAvatar);
+
                         communityId = documentSnapshot.getString("communityId");
                         communityName = documentSnapshot.getString("communityName");
                         
@@ -121,7 +155,7 @@ public class MainStaffDashboardActivity extends AppCompatActivity {
                                     .addOnSuccessListener(commDoc -> {
                                         if (commDoc.exists()) {
                                             String fetchedName = commDoc.getString("name");
-                                            String joinCode = commDoc.getString("joinCode");
+                                            MainStaffDashboardActivity.this.joinCode = commDoc.getString("joinCode");
                                             
                                             if (fetchedName != null && !fetchedName.isEmpty()) {
                                                 communityName = fetchedName;
@@ -133,8 +167,8 @@ public class MainStaffDashboardActivity extends AppCompatActivity {
                                             
                                             // Update header UI
                                             binding.tvCommunityName.setText(communityName);
-                                            if (joinCode != null && !joinCode.isEmpty()) {
-                                                binding.tvJoinCode.setText("Join Code: " + joinCode);
+                                            if (MainStaffDashboardActivity.this.joinCode != null && !MainStaffDashboardActivity.this.joinCode.isEmpty()) {
+                                                binding.tvJoinCode.setText("Join Code: " + MainStaffDashboardActivity.this.joinCode);
                                                 binding.tvJoinCode.setVisibility(View.VISIBLE);
                                             } else {
                                                 binding.tvJoinCode.setVisibility(View.GONE);
@@ -158,7 +192,7 @@ public class MainStaffDashboardActivity extends AppCompatActivity {
                                             com.google.firebase.firestore.DocumentSnapshot commDoc = querySnapshot.getDocuments().get(0);
                                             communityId = commDoc.getId();
                                             communityName = commDoc.getString("name");
-                                            String joinCode = commDoc.getString("joinCode");
+                                            MainStaffDashboardActivity.this.joinCode = commDoc.getString("joinCode");
                                             
                                             if (communityId != null) {
                                                 java.util.Map<String, Object> updates = new java.util.HashMap<>();
@@ -170,8 +204,8 @@ public class MainStaffDashboardActivity extends AppCompatActivity {
                                                 
                                                 // Update UI
                                                 binding.tvCommunityName.setText(communityName != null ? communityName : "My Community");
-                                                if (joinCode != null && !joinCode.isEmpty()) {
-                                                    binding.tvJoinCode.setText("Join Code: " + joinCode);
+                                                if (MainStaffDashboardActivity.this.joinCode != null && !MainStaffDashboardActivity.this.joinCode.isEmpty()) {
+                                                    binding.tvJoinCode.setText("Join Code: " + MainStaffDashboardActivity.this.joinCode);
                                                     binding.tvJoinCode.setVisibility(View.VISIBLE);
                                                 } else {
                                                     binding.tvJoinCode.setVisibility(View.GONE);
@@ -214,25 +248,36 @@ public class MainStaffDashboardActivity extends AppCompatActivity {
         com.google.android.material.textfield.TextInputEditText etEmail = dialogView.findViewById(R.id.etInviteEmail);
         com.google.android.material.textfield.TextInputEditText etNote = dialogView.findViewById(R.id.etInviteNote);
 
-        new androidx.appcompat.app.AlertDialog.Builder(this)
+        androidx.appcompat.app.AlertDialog dialog = new androidx.appcompat.app.AlertDialog.Builder(this)
                 .setView(dialogView)
-                .setPositiveButton("Send Email", (dialog, which) -> {
-                    String recipientEmail = etEmail.getText().toString().trim();
-                    String note = etNote.getText().toString().trim();
+                .create();
 
-                    if (recipientEmail.isEmpty()) {
-                        android.widget.Toast.makeText(this, "Email is required", android.widget.Toast.LENGTH_SHORT).show();
-                        return;
-                    }
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(android.graphics.Color.TRANSPARENT));
+        }
 
-                    sendInvitationEmail(recipientEmail, note);
-                })
-                .setNeutralButton("Share Link", (dialog, which) -> {
-                    String note = etNote.getText().toString().trim();
-                    shareInvitationLink(note);
-                })
-                .setNegativeButton("Cancel", null)
-                .show();
+        dialogView.findViewById(R.id.btnCancel).setOnClickListener(v -> dialog.dismiss());
+
+        dialogView.findViewById(R.id.btnShareLink).setOnClickListener(v -> {
+            String note = etNote.getText().toString().trim();
+            shareInvitationLink(note);
+            dialog.dismiss();
+        });
+
+        dialogView.findViewById(R.id.btnSendEmail).setOnClickListener(v -> {
+            String recipientEmail = etEmail.getText().toString().trim();
+            String note = etNote.getText().toString().trim();
+
+            if (recipientEmail.isEmpty()) {
+                android.widget.Toast.makeText(this, "Email is required", android.widget.Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            sendInvitationEmail(recipientEmail, note);
+            dialog.dismiss();
+        });
+
+        dialog.show();
     }
 
     private void shareInvitationLink(String note) {
@@ -466,6 +511,179 @@ public class MainStaffDashboardActivity extends AppCompatActivity {
                         pendingIntent);
             }
         }
+    }
+
+    private void showUserProfileDialog() {
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_user_profile, null);
+        
+        android.widget.ImageView btnClose = dialogView.findViewById(R.id.btnDialogClose);
+        android.widget.ImageView ivAvatar = dialogView.findViewById(R.id.ivDialogAvatar);
+        android.widget.TextView tvName = dialogView.findViewById(R.id.tvDialogName);
+        android.widget.TextView tvRole = dialogView.findViewById(R.id.tvDialogRole);
+        android.widget.TextView tvEmail = dialogView.findViewById(R.id.tvDialogEmail);
+        
+        android.widget.LinearLayout layoutAge = dialogView.findViewById(R.id.layoutDialogAge);
+        android.widget.TextView tvAge = dialogView.findViewById(R.id.tvDialogAge);
+        android.view.View dividerAge = dialogView.findViewById(R.id.dividerDialogAge);
+        
+        android.widget.LinearLayout layoutCommunity = dialogView.findViewById(R.id.layoutDialogCommunity);
+        android.widget.TextView tvCommunityName = dialogView.findViewById(R.id.tvDialogCommunityName);
+        android.view.View dividerCommunity = dialogView.findViewById(R.id.dividerDialogCommunity);
+        
+        android.widget.LinearLayout layoutCode = dialogView.findViewById(R.id.layoutDialogCode);
+        android.widget.TextView tvCommunityCode = dialogView.findViewById(R.id.tvDialogCommunityCode);
+        android.widget.ImageView btnCopy = dialogView.findViewById(R.id.btnCopyCode);
+        
+        // Navigation Tabs & Toggles
+        android.widget.LinearLayout btnTabPersonal = dialogView.findViewById(R.id.btnTabPersonal);
+        android.widget.LinearLayout btnTabNotifications = dialogView.findViewById(R.id.btnTabNotifications);
+        android.widget.LinearLayout btnTabAbout = dialogView.findViewById(R.id.btnTabAbout);
+        
+        android.widget.TextView tvTabPersonalText = dialogView.findViewById(R.id.tvTabPersonalText);
+        android.widget.TextView tvTabNotificationsText = dialogView.findViewById(R.id.tvTabNotificationsText);
+        android.widget.TextView tvTabAboutText = dialogView.findViewById(R.id.tvTabAboutText);
+        
+        android.view.View indicatorPersonal = dialogView.findViewById(R.id.indicatorPersonal);
+        android.view.View indicatorNotifications = dialogView.findViewById(R.id.indicatorNotifications);
+        android.view.View indicatorAbout = dialogView.findViewById(R.id.indicatorAbout);
+        
+        android.widget.LinearLayout layoutSectionPersonal = dialogView.findViewById(R.id.layoutSectionPersonal);
+        android.widget.LinearLayout layoutSectionNotifications = dialogView.findViewById(R.id.layoutSectionNotifications);
+        android.widget.LinearLayout layoutSectionAbout = dialogView.findViewById(R.id.layoutSectionAbout);
+        
+        androidx.appcompat.widget.SwitchCompat switchNotifications = dialogView.findViewById(R.id.switchNotifications);
+        androidx.appcompat.widget.AppCompatButton btnLogout = dialogView.findViewById(R.id.btnDialogLogout);
+        
+        androidx.appcompat.app.AlertDialog dialog = new androidx.appcompat.app.AlertDialog.Builder(this)
+                .setView(dialogView)
+                .create();
+        
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(android.graphics.Color.TRANSPARENT));
+        }
+
+        btnClose.setOnClickListener(v -> dialog.dismiss());
+
+        // Basic Profile Info
+        tvName.setText(userName != null && !userName.isEmpty() ? userName : "Staff Member");
+        tvRole.setText("Staff");
+        tvEmail.setText(userEmail != null && !userEmail.isEmpty() ? userEmail : "No Email");
+
+        // Hide Age for Staff
+        layoutAge.setVisibility(View.GONE);
+        dividerAge.setVisibility(View.GONE);
+
+        // Community Details
+        if (communityName != null && !communityName.isEmpty()) {
+            tvCommunityName.setText(communityName);
+            layoutCommunity.setVisibility(View.VISIBLE);
+            dividerCommunity.setVisibility(View.VISIBLE);
+        } else {
+            layoutCommunity.setVisibility(View.GONE);
+            dividerCommunity.setVisibility(View.GONE);
+        }
+
+        if (joinCode != null && !joinCode.isEmpty()) {
+            tvCommunityCode.setText(joinCode);
+            layoutCode.setVisibility(View.VISIBLE);
+            
+            btnCopy.setOnClickListener(v -> {
+                android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                android.content.ClipData clip = android.content.ClipData.newPlainText("Community Join Code", joinCode);
+                if (clipboard != null) {
+                    clipboard.setPrimaryClip(clip);
+                    android.widget.Toast.makeText(this, "Join Code copied to clipboard", android.widget.Toast.LENGTH_SHORT).show();
+                }
+            });
+        } else {
+            layoutCode.setVisibility(View.GONE);
+        }
+
+        // Setup switch preferences
+        android.content.SharedPreferences prefs = getSharedPreferences("app_settings", MODE_PRIVATE);
+        switchNotifications.setChecked(prefs.getBoolean("notifications_enabled", true));
+        switchNotifications.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            prefs.edit().putBoolean("notifications_enabled", isChecked).apply();
+            if (isChecked) {
+                android.widget.Toast.makeText(this, "Reminders enabled", android.widget.Toast.LENGTH_SHORT).show();
+            } else {
+                android.widget.Toast.makeText(this, "Reminders silenced", android.widget.Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Tab selection logic
+        btnTabPersonal.setOnClickListener(v -> {
+            tvTabPersonalText.setTextColor(getResources().getColor(R.color.brand_start));
+            tvTabPersonalText.setTypeface(null, android.graphics.Typeface.BOLD);
+            indicatorPersonal.setBackgroundColor(getResources().getColor(R.color.brand_start));
+
+            tvTabNotificationsText.setTextColor(getResources().getColor(R.color.text_grey));
+            tvTabNotificationsText.setTypeface(null, android.graphics.Typeface.NORMAL);
+            indicatorNotifications.setBackgroundColor(android.graphics.Color.TRANSPARENT);
+
+            tvTabAboutText.setTextColor(getResources().getColor(R.color.text_grey));
+            tvTabAboutText.setTypeface(null, android.graphics.Typeface.NORMAL);
+            indicatorAbout.setBackgroundColor(android.graphics.Color.TRANSPARENT);
+
+            layoutSectionPersonal.setVisibility(View.VISIBLE);
+            layoutSectionNotifications.setVisibility(View.GONE);
+            layoutSectionAbout.setVisibility(View.GONE);
+        });
+
+        btnTabNotifications.setOnClickListener(v -> {
+            tvTabPersonalText.setTextColor(getResources().getColor(R.color.text_grey));
+            tvTabPersonalText.setTypeface(null, android.graphics.Typeface.NORMAL);
+            indicatorPersonal.setBackgroundColor(android.graphics.Color.TRANSPARENT);
+
+            tvTabNotificationsText.setTextColor(getResources().getColor(R.color.brand_start));
+            tvTabNotificationsText.setTypeface(null, android.graphics.Typeface.BOLD);
+            indicatorNotifications.setBackgroundColor(getResources().getColor(R.color.brand_start));
+
+            tvTabAboutText.setTextColor(getResources().getColor(R.color.text_grey));
+            tvTabAboutText.setTypeface(null, android.graphics.Typeface.NORMAL);
+            indicatorAbout.setBackgroundColor(android.graphics.Color.TRANSPARENT);
+
+            layoutSectionPersonal.setVisibility(View.GONE);
+            layoutSectionNotifications.setVisibility(View.VISIBLE);
+            layoutSectionAbout.setVisibility(View.GONE);
+        });
+
+        btnTabAbout.setOnClickListener(v -> {
+            tvTabPersonalText.setTextColor(getResources().getColor(R.color.text_grey));
+            tvTabPersonalText.setTypeface(null, android.graphics.Typeface.NORMAL);
+            indicatorPersonal.setBackgroundColor(android.graphics.Color.TRANSPARENT);
+
+            tvTabNotificationsText.setTextColor(getResources().getColor(R.color.text_grey));
+            tvTabNotificationsText.setTypeface(null, android.graphics.Typeface.NORMAL);
+            indicatorNotifications.setBackgroundColor(android.graphics.Color.TRANSPARENT);
+
+            tvTabAboutText.setTextColor(getResources().getColor(R.color.brand_start));
+            tvTabAboutText.setTypeface(null, android.graphics.Typeface.BOLD);
+            indicatorAbout.setBackgroundColor(getResources().getColor(R.color.brand_start));
+
+            layoutSectionPersonal.setVisibility(View.GONE);
+            layoutSectionNotifications.setVisibility(View.GONE);
+            layoutSectionAbout.setVisibility(View.VISIBLE);
+        });
+
+        // Load Avatar URL
+        com.google.firebase.auth.FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        String avatarUrl = (profileImageUrl != null && !profileImageUrl.isEmpty()) ? profileImageUrl : (currentUser != null && currentUser.getPhotoUrl() != null ? currentUser.getPhotoUrl().toString() : null);
+        com.bumptech.glide.Glide.with(this)
+                .load(avatarUrl)
+                .placeholder(R.drawable.ic_avatar_placeholder)
+                .error(R.drawable.ic_avatar_placeholder)
+                .into(ivAvatar);
+
+        btnLogout.setOnClickListener(v -> {
+            dialog.dismiss();
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        });
+
+        dialog.show();
     }
 
     @Override

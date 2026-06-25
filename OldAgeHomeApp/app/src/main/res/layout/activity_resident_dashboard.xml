@@ -26,7 +26,6 @@
             android:orientation="vertical"
             android:paddingBottom="32dp">
 
-            <!-- Custom Toolbar Area -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
@@ -42,22 +41,44 @@
                     android:textColor="@color/white"
                     android:layout_centerVertical="true" />
 
-                <TextView
-                    android:id="@+id/tvLogout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Logout"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:drawableEnd="@android:drawable/ic_lock_power_off"
-                    android:drawablePadding="4dp"
-                    android:drawableTint="@color/white"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
+                <ImageView
+                    android:id="@+id/ivCart"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_cart"
                     android:padding="8dp"
+                    android:layout_toStartOf="@id/cardProfile"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
                     android:background="?selectableItemBackgroundBorderless"
                     android:clickable="true"
-                    android:focusable="true" />
+                    android:focusable="true"
+                    app:tint="@color/white"
+                    android:contentDescription="Shopping Cart" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardProfile"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1.5dp"
+                    app:strokeColor="@color/white"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/ivProfileAvatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_avatar_placeholder"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Profile Picture" />
+                </com.google.android.material.card.MaterialCardView>
             </RelativeLayout>
 
             <!-- Welcome Section -->
@@ -71,6 +92,7 @@
                 android:layout_marginBottom="48dp">
 
                 <TextView
+                    android:id="@+id/tvCommunityName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hello, Resident"
@@ -86,6 +108,21 @@
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/tvJoinCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Join Code: ---"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFD54F"
+                    android:background="@drawable/bg_btn_gradient"
+                    android:backgroundTint="#20FFFFFF"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
             </LinearLayout>
 
             <!-- Floating Content Card -->
@@ -141,6 +178,7 @@
                         android:layout_marginBottom="16dp">
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAge"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -160,6 +198,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilRoomNumber"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
