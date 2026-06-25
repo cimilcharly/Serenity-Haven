@@ -60,7 +60,47 @@ public class StoreMedicineAdapter extends RecyclerView.Adapter<StoreMedicineAdap
         }
 
         holder.btnBuy.setOnClickListener(v -> launchBuyUrl(item.getPurchaseUrl()));
-        holder.itemView.setOnClickListener(v -> launchBuyUrl(item.getPurchaseUrl()));
+        holder.itemView.setOnClickListener(v -> showMedicineDetailsDialog(item));
+    }
+
+    private void showMedicineDetailsDialog(StoreMedicineModel item) {
+        try {
+            com.google.android.material.bottomsheet.BottomSheetDialog bottomSheetDialog = 
+                    new com.google.android.material.bottomsheet.BottomSheetDialog(context);
+            
+            View sheetView = LayoutInflater.from(context).inflate(R.layout.dialog_medicine_details, null);
+            bottomSheetDialog.setContentView(sheetView);
+
+            ImageView ivDetailImage = sheetView.findViewById(R.id.ivDetailImage);
+            TextView tvDetailName = sheetView.findViewById(R.id.tvDetailName);
+            TextView tvDetailCategory = sheetView.findViewById(R.id.tvDetailCategory);
+            TextView tvDetailPrice = sheetView.findViewById(R.id.tvDetailPrice);
+            TextView tvDetailDesc = sheetView.findViewById(R.id.tvDetailDesc);
+            TextView tvDetailSafetyTip = sheetView.findViewById(R.id.tvDetailSafetyTip);
+            Button btnDetailBuy = sheetView.findViewById(R.id.btnDetailBuy);
+
+            tvDetailName.setText(item.getName());
+            tvDetailCategory.setText(item.getCategory() != null ? item.getCategory() : "General");
+            tvDetailPrice.setText(item.getPrice());
+            tvDetailDesc.setText(item.getDescription());
+            tvDetailSafetyTip.setText(item.getSafetyTip() != null ? item.getSafetyTip() : "Use as directed by your physician or pharmacist.");
+
+            if (item.getImageResId() != 0) {
+                ivDetailImage.setImageResource(item.getImageResId());
+            } else {
+                ivDetailImage.setImageResource(R.drawable.med_tablet_strip);
+            }
+
+            btnDetailBuy.setText("Buy on " + item.getPlatform() + " - " + item.getPrice());
+            btnDetailBuy.setOnClickListener(v -> {
+                launchBuyUrl(item.getPurchaseUrl());
+                bottomSheetDialog.dismiss();
+            });
+
+            bottomSheetDialog.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void launchBuyUrl(String url) {
