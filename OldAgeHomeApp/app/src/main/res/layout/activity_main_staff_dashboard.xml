@@ -48,31 +48,38 @@
                     android:layout_height="40dp"
                     android:src="@drawable/ic_cart"
                     android:padding="8dp"
-                    android:layout_toStartOf="@id/tvLogout"
+                    android:layout_toStartOf="@id/cardProfile"
                     android:layout_centerVertical="true"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="12dp"
                     android:background="?selectableItemBackgroundBorderless"
                     android:clickable="true"
                     android:focusable="true"
                     app:tint="@color/white"
                     android:contentDescription="Shopping Cart" />
 
-                <TextView
-                    android:id="@+id/tvLogout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Logout"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:drawableEnd="@android:drawable/ic_lock_power_off"
-                    android:drawablePadding="4dp"
-                    android:drawableTint="@color/white"
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardProfile"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:padding="8dp"
-                    android:background="?selectableItemBackgroundBorderless"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1.5dp"
+                    app:strokeColor="@color/white"
+                    app:cardBackgroundColor="@android:color/transparent"
                     android:clickable="true"
-                    android:focusable="true" />
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/ivProfileAvatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_avatar_placeholder"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Profile Picture" />
+                </com.google.android.material.card.MaterialCardView>
             </RelativeLayout>
 
             <!-- Welcome Section -->

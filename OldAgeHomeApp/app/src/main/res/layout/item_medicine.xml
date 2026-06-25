@@ -6,9 +6,11 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="16dp"
     android:layout_marginBottom="12dp"
-    app:cardCornerRadius="12dp"
+    app:cardCornerRadius="16dp"
     app:cardElevation="2dp"
     app:cardBackgroundColor="@color/white"
+    app:strokeWidth="1dp"
+    app:strokeColor="#F0F0F0"
     android:clickable="true"
     android:focusable="true">
 
@@ -17,17 +19,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="12dp">
+        android:padding="16dp">
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@android:drawable/ic_menu_agenda"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_medicine_pill"
             app:tint="@color/brand_start"
             android:background="@drawable/bg_btn_gradient"
             android:backgroundTint="#154e54c8"
-            android:padding="8dp"
-            android:layout_marginEnd="12dp" />
+            android:padding="12dp"
+            android:layout_marginEnd="16dp" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -40,15 +42,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Paracetamol"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
-                android:textColor="@color/text_dark" />
+                android:textColor="@color/text_dark"
+                android:layout_marginBottom="4dp" />
 
             <TextView
                 android:id="@+id/tvDosage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="500mg"
+                android:text="500 mg"
                 android:textSize="14sp"
                 android:textColor="@color/text_grey" />
         </LinearLayout>
@@ -63,29 +66,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="12dp">
 
                 <ImageView
                     android:id="@+id/btnEdit"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:src="@android:drawable/ic_menu_edit"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_edit"
                     app:tint="@color/brand_start"
-                    android:padding="4dp"
+                    android:padding="6dp"
                     android:background="@drawable/bg_btn_gradient"
-                    android:backgroundTint="#204e54c8"
+                    android:backgroundTint="#154e54c8"
                     android:contentDescription="Edit"
                     android:layout_marginEnd="8dp" />
 
                 <ImageView
                     android:id="@+id/btnDelete"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:src="@android:drawable/ic_menu_delete"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_delete"
                     app:tint="@color/brand_secondary"
-                    android:padding="4dp"
+                    android:padding="6dp"
                     android:background="@drawable/bg_btn_gradient"
-                    android:backgroundTint="#20FF8A65"
+                    android:backgroundTint="#15FF8A65"
                     android:contentDescription="Delete" />
             </LinearLayout>
 
@@ -94,21 +97,21 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginBottom="4dp">
+                android:layout_marginBottom="8dp">
 
                 <ImageView
-                    android:layout_width="14dp"
-                    android:layout_height="14dp"
-                    android:src="@android:drawable/ic_lock_idle_alarm"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_alarm"
                     app:tint="@color/text_grey"
-                    android:layout_marginEnd="4dp" />
+                    android:layout_marginEnd="6dp" />
 
                 <TextView
                     android:id="@+id/tvTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="08:00 AM"
-                    android:textSize="12sp"
+                    android:textSize="13sp"
                     android:textStyle="bold"
                     android:textColor="@color/text_dark" />
             </LinearLayout>
@@ -119,10 +122,11 @@
                 android:layout_height="wrap_content"
                 android:text="Qty: 30"
                 android:textSize="12sp"
+                android:textStyle="bold"
                 android:textColor="@color/white"
                 android:background="@drawable/bg_btn_gradient"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="2dp" />
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp" />
         </LinearLayout>
 
     </LinearLayout>
