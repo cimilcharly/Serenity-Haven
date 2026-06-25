@@ -73,6 +73,10 @@ public class ResidentDashboardActivity extends AppCompatActivity {
             startActivity(new Intent(this, ChatbotActivity.class));
         });
 
+        binding.ivCart.setOnClickListener(v -> {
+            startActivity(new Intent(this, MedicineStoreActivity.class));
+        });
+
         binding.tvLogout.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
             Intent intent = new Intent(this, LoginActivity.class);

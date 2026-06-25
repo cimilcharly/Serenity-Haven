@@ -63,6 +63,10 @@ public class MainStaffDashboardActivity extends AppCompatActivity {
 
         binding.cardInvite.setOnClickListener(v -> showInviteDialog());
 
+        binding.ivCart.setOnClickListener(v -> {
+            startActivity(new Intent(this, MedicineStoreActivity.class));
+        });
+
         binding.tvLogout.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
             Intent intent = new Intent(this, LoginActivity.class);

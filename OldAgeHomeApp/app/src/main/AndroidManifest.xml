@@ -69,6 +69,7 @@
         </service>
 
         <activity android:name=".activities.MedicineActivity" />
+        <activity android:name=".activities.MedicineStoreActivity" />
         <activity android:name=".activities.ChatbotActivity" />
         <activity android:name=".activities.ResidentDashboardActivity" />
         <activity android:name=".activities.MainStaffDashboardActivity" />
